@@ -11,19 +11,35 @@
 </head>
 
 <body>
-    <div class="navbar">
+   <!-- <div class="navbar">
         <nav id="navbar_container">
             <img src="img/Dropdownmenu.svg" alt="" class="nav_dropdownmenu">
         </nav>
+    </div>-->
+
+    <div class="navbar_container">
+        <nav>
+            <input type="checkbox" id="chk-menu">
+            <label for="chk-menu" class="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <div class="items">
+                <a href=" " class="item">Acerca de</a>
+                <a href=" " class="item">Productos personalizados</a>
+                <a href=" " class="item">Contacto</a>
+            </div>
+        </nav>
     </div>
+
     <header id="header_container">
         <img src="img/LogoDulceTrigo.svg" alt="" class="logo">
         <div class="button-header">
-        <h3 class="header_title">“Traemos el dulce sabor que le hace falta a tu vida”</h3>
-           <div class="buttons_container">               
-               <div class="button-search">
-                   <input type="search" id="search" name="search">
-                   <i class="fa-solid fa-magnifying-glass"></i>
+            <h3 class="header_title">“Traemos el dulce sabor que le hace falta a tu vida”</h3>
+            <div class="buttons_container">
+                <div class="button-search">
+                    <input type="search" id="search" name="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <button type="submit">
                     <i class="fa-solid fa-cart-shopping shop"></i>
@@ -32,7 +48,7 @@
         </div>
     </header>
 
-    <footer id="footer">
+    <footer>
         <div class="box-footer">
             <p>Políticas de privacidad|Términos y condiciones</p>
         </div>
