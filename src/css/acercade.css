@@ -1,0 +1,405 @@
+@font-face{
+    font-family: 'nesans';
+    src: url(../utils/fonts/Nesans\ Semi\ Bold.ttf);
+}
+@font-face{
+    font-family: 'breadley';
+    src: url(../utils/fonts/BreadleySans-Regular.ttf);
+}
+@font-face{
+    font-family: 'delius';
+    src: url(../utils/fonts/Delius-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red-wine: #731627;
+    --pink-stick: #D9B1AD;
+    --white: #F6F5EE;
+    --dark-beige:#BF9775;
+    --golden: #AF8738;
+    --cream: #F0ECDE;
+    --black-rose:#2B0D16;
+    --light-red-wine: rgba(141,22,65,40%);
+    --beby-pink: #FACCC7;
+}
+body{
+    width: 100%;
+    font-size: 16px;
+}
+nav{
+    width: 100%;
+    background-color: var(--red-wine);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.5rem 0;
+}
+.line-nav{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 3px;
+    width: 100%;
+}
+#chk-menu{
+    display: none;
+}
+#chk-menu:checked ~ .items{
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+.btn-menu{
+    color: var(--beby-pink);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.btn-menu i{
+    background-color: var(--pink-stick);
+    color: var(--black-rose);
+    padding: 5px 6px;
+    border-radius: 10px;
+    border: 1px solid var(--red-wine);
+    box-shadow: 4px 4px 6px var(--black-rose);
+}
+.items{
+    display: none;
+}
+.items a{
+    text-decoration: none;
+}
+.item{
+    color: var(--cream);
+    font-family: 'delius';
+    font-size: 20px;
+    margin-top: 10px;
+}
+.item:hover{
+    color: var(--red-wine);
+    background-color: var(--beby-pink);
+    text-shadow: 0.5px 0.5px 0.5px var(--red-wine);
+}
+#header-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+#header-container img{
+    margin-top: 10px;
+    width: 250px;
+}
+.header-title{
+    color: var(--black-rose);
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0.5px var(--black-rose);
+    font-family: 'nesans';
+    font-size: 22px;
+}
+.button-header{
+    display: flex;
+    justify-content: center;
+}
+.button-header button{
+    background-color: var(--pink-stick);
+    border: 0.5px solid var(--red-wine);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+    padding: 8px;
+    box-shadow: 4px 4px 6px var(--black-rose);
+}
+.shop{
+    font-size: 20px;
+    color: var(--black-rose);
+}
+.button-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons_container{
+    display: flex;
+    margin-top: 3%;
+}
+.button-search{
+    display: flex;
+    background-color: var(--pink-stick);
+    border: 0.5px solid var(--red-wine);
+    box-shadow: 4px 4px 6px var(--black-rose);
+    border-radius: 30px;
+    margin-top: 8px;
+}
+.button-search input{
+    border: none;
+    border-radius: 30px;
+    background-color: var(--pink-stick);
+    width: 150px;
+    height: 30px;
+}
+.button-search i{
+    padding: 8px 8px 0 0;
+    color: var(--black-rose);
+    font-size: 20px;
+}
+#acercade-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.container-collage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    font-family: 'breadley';
+    color:var(--red-wine);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+p{
+    font-family: 'breadley';
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.collage{
+    width: 300px;
+    height: auto;
+}
+.line{
+    width: 100%;
+    margin: 20px auto;
+}
+#tips-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+#tips-container h2{
+    margin-bottom: 20px;
+}
+.card1,.card3,.card5{
+    display: flex;
+    align-items: center;
+    height: 144px;
+    padding: 0 10px;
+    background-color: var(--pink-stick);
+    border-radius: 50px 0 50px 0;
+    box-shadow: 2px 2px 5px var(--red-wine);
+}
+.card1 img,.card2 img,.card3 img, .card4 img,.card5 img{
+    width: 110px;
+    height: auto;
+    border-radius: 50px;
+    margin: 10px 10px 10px 0;
+}
+.card1 p,.card2 p, .card3 p, .card4 p,.card5 p{
+    margin-top: 10px;
+}
+.card2, .card4{
+    display: flex;
+    align-items: center;
+    height: 144px;
+    padding: 0 10px;
+    margin: 20px 0;
+    background-color: var(--cream);
+    border-radius: 0 50px 0 50px;
+    box-shadow: -2px 2px 5px var(--red-wine);
+}
+footer{
+    width: 100%;
+    background-image: url(../utils/img/footerDulceTrigo.svg);
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+footer p{
+    font-size: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'delius';
+}
+footer i{
+    margin: 0 1% 2% 0;  
+    font-size: 30px;
+    color: var(--cream);
+}
+/*Resolucion tablet*/
+@media screen and (min-width:768px){
+    nav{
+        flex-direction: row;
+        padding-top:0;
+    }
+    
+    .btn-menu{
+        display: none;
+    }
+    .items{
+        display: flex;
+        justify-content: space-around;
+    }
+    .line-nav{
+        margin-top: 4px;
+    }
+    #header-container{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #header-container img{
+        width: 285px;
+    }
+    .button-header{
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+    .buttons_container{
+        display: flex;
+        margin: 0 0 8% 0;
+    }
+    .header-title{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 38px;
+    }
+    p{
+        font-size: 26px;
+    }
+    .collage{
+        width: 600px;
+    }
+    .card1, .card2, .card3, .card4, .card5{
+        height: 200px;
+    }
+    .card1 img,.card2 img,.card3 img,.card4 img,.card5 img{
+        width: 170px;
+    }
+    footer{
+        margin-top: 30px;
+    }
+    footer p{
+        margin-bottom: 1.8rem;
+        font-size: 18px;
+    }
+    footer i{
+        font-size: 40px;
+        margin: 0 1% 1.5% 0;  
+    }
+}
+/*Resolucion medias*/
+@media screen and (min-width:1024px){
+    #header-container img{
+        width: 320px;
+    }
+    .shop, .button-search i{
+        font-size: 25px;
+    }
+    .header-title{
+        font-size: 37px;
+    }
+    h2{
+        font-size: 46px;
+    }
+    .container-collage{
+        flex-direction: row;
+        padding: 20px 0 ;
+    }
+    .container-collage p{
+        font-size: 32px;
+        margin-right: 30px;
+    }
+    .collage{
+        width: 350px;
+    }
+    .tips{
+        display: flex;
+    }
+    .width{
+        width: 50%;
+        margin: 10px;
+    }
+    .card1,.card2{
+        height: 240px;
+        padding: 10px 20px;
+        border-radius: 0px 50px 50px 0px;
+    }
+    .card2{
+        box-shadow: 2px 2px 5px var(--red-wine);
+    }
+    .card1 img,.card2 img,.card3 img,.card4 img{
+        width: 135px;
+    }
+    .card3,.card4{
+        height: 240px;
+        padding: 10px 20px;
+        border-radius: 50px 0px 0px 50px;
+    }
+    .card3{
+        box-shadow: -2px 2px 5px var(--red-wine);
+    }
+    .card5{
+        height: 240px;
+        margin: -10px 10px 10px 10px;
+        border-radius: 50px;
+        padding: 10px 20px;
+        box-shadow: 0px 2px 5px var(--red-wine);
+    }
+    .card5 img{
+        width: 170px;
+    }
+    footer{
+        height: 150px;
+    }
+    footer p{
+        margin-bottom: 3rem;
+        font-size: 20px;
+    }
+    footer i{
+        font-size: 45px;
+        margin: 0 1% 2.5% 0;  
+    }
+}
+/*Resolucion macro*/
+@media screen and (min-width:1200px){
+    #header-container img{
+        width: 350px;
+    }
+    .shop, .button-search i{
+        font-size: 30px;
+    }
+    .header-title{
+        font-size: 45px;
+    }
+    .container-collage p{
+        font-size: 34px;
+    }
+    .collage{
+        width: 400px;
+    }
+    .card1, .card2, .card3, .card4, .card5{
+        height: 220px;
+    }
+    footer p{
+        margin-bottom: 3rem;
+        font-size: 22px;
+    }
+    footer i{
+        font-size: 45px;
+        margin: 0 1% 2% 0;  
+    }
+}
