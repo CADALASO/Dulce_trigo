@@ -3,8 +3,10 @@
     src: url(../fonts/NesansSemiBold.ttf);
     font-family: 'breadley';
     src: url(../fonts/BreadleySans-Regular.ttf);
+}
+@font-face{
     font-family: 'delius';
-    src: url(../fonts/Delius-Regular.ttf);
+    src: url(../utils/fonts/Delius-Regular.ttf);
 }
 *{
     margin: 0;
@@ -24,6 +26,7 @@
 }
 body{
     font-size: 16px;
+    width: 100%;
 }
 nav{
     background-color: var(--red-wine);
@@ -34,6 +37,12 @@ nav{
     padding: 0.5rem;
     border: 2px solid var(--pink-stick);
 }
+hr{
+    background-color: var(--red-wine);
+    width: 100%;
+    height: 4px;
+    margin-top: 2px;
+}
 #chk-menu{
     display: none;
 }
@@ -42,17 +51,11 @@ nav{
     display: flex;
     flex-direction: column;
 }
-/*
-.navbar_container{
-    background-color: var(--red-wine);
-    padding-top: 2px;
-}
-*/
 .btn-menu{
     color: var(--beby-pink);
     font-size: 1.5rem;
     cursor: pointer;
-    width: 100vw;
+    width: 100%
 }
 .btn-menu i{
     background-color: var(--pink-stick);
@@ -77,32 +80,28 @@ nav{
     background-color: var(--beby-pink);
     text-shadow: 0.5px 0.5px 0.5px var(--red-wine);
 }
-
-
 #header_container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 2% 8% 0;
 }
-
 .logo{
     font-size: 500px;
+    width: 270px;
+    margin: 10px auto;
 }
-
 .header_title{
     color: var(--black-rose);
     text-align: center;
     text-shadow: 0.5px 0.5px 0.5px var(--black-rose);
     font-family: 'nesans';
 }
-
 .button-header{
     display: flex;
     justify-content: center;
     margin: 15px;
 }
-
 .button-header button{
     background-color: var(--pink-stick);
     border: 1px solid var(--pink-stick);
@@ -110,7 +109,7 @@ nav{
     margin-left: 10px;
     margin-top: 8px;
     padding: 8px;
-    box-shadow: 2px 2px 2px var(--red-wine);
+    box-shadow: 2px 2px 5px var(--red-wine);
 }
 
 .shop{
@@ -132,7 +131,7 @@ nav{
 .button-search{
     display: flex;
     background-color: var(--pink-stick);
-    box-shadow: 2px 2px 2px var(--red-wine);
+    box-shadow: 2px 2px 5px var(--red-wine);
     border-radius: 25px;
     margin-top: 8px;
 }
@@ -151,13 +150,71 @@ nav{
     font-size: 20px;
 }
 
-/*
-.navbar{
-    border-bottom: 3px solid var(--red-wine);
-    padding-bottom: 3px;
-}*/
+.home h2{
+    font-family: 'delius';  
+    text-align: center ; 
+    font-size: 30px;
+}
+.home hr{
+    width: 80%;
+    margin: 20px auto 0 auto;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.bakery{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-image: url(../utils/img/pan-home.svg);
+    background-size: 100%;
+    width: 230px;
+    height: 286px;
+    border-radius: 500px;
+    margin: 0 auto;
+    color: var(--black-rose);
+    text-decoration: none;
+}
+.bakery:hover{ 
+    background-image: url(../utils/img/fondo-home-boton.svg);
+    background-size: 100%;
+    transition: all 1s;
+}
+.bakery h1{
+    font-family: 'nesans';
+    visibility: hidden;
+}
+.bakery:hover h1{
+    visibility: visible;
+}
+.cake{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-image: url(../utils/img/torta-home.svg);
+    background-size: 100%;
+    width: 230px;
+    height: 286px;
+    border-radius: 500px;
+    margin: 20px auto;
+    text-decoration: none;
+    color: var(--black-rose);
+}
+.cake h1{
+    font-family: 'nesans';
+    visibility: hidden;
+}
+.cake:hover h1{
+    visibility: visible;
+}
+.cake:hover{
+    background-image: url(../utils/img/fondo-home-boton.svg);
+    background-size: 100%;
+    transition: all 1s;
+}
 footer{
-    background-image: url(../img/footerDulceTrigo.svg);
+    background-image: url(../utils/img/footerDulceTrigo.svg);
     background-size: cover;
     height: 150px;
     display: flex;
@@ -183,58 +240,89 @@ footer i{
         flex-direction: row;
         align-items: flex-start; 
     }
-
     .logo{
         width: 55%;
     }
-
     .header_title{
-        width: 100%;
-        margin: 5% 0%;
+        font-size: 25px;
+        margin-top: 3rem;
     }
-    
     .button-header{
         display: flex;
         align-items: flex-end;
         flex-direction: column-reverse;
     }
-
     .buttons_container{
         display: flex;
         margin-bottom: 8%;
     }
-
     .button-search{
         margin-right: 5%;
     }
-
+    .home h2{
+        font-size: 40px;
+    }
+    .buttons{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 4rem ;
+    }
+    .cake, .bakery{
+        width: 310px;
+        height: 400px;
+        background-size: 105%;
+    }
     footer p{
         font-size: 13.5px;
     }
-
     footer i{
         font-size: 40px;
         margin-bottom: 3%;
+        margin-left: 5px;
     }
-
     .box-footer {
         margin-top: -100px;
     }
 }
-
 @media screen and (min-width:1024px){
     .header_title{
-        font-size: 28px;
+        font-size: 33px;
+    }
+    .home h2{
+        font-size: 50px;
+        margin-top: -5px;
+    }
+    .home hr{
+        margin-bottom: 2rem;
+    }
+    .cake, .bakery{
+        width: 350px;
     }
     footer p{
-        font-size: 18px;
+        font-size: 20px;
     }
     footer i{
-        font-size: 60px;
+        font-size: 58px;
+        margin-left: 1rem;
     }
 }
 
 @media screen and (min-width:1200px){
+    .header_title{
+        font-size: 38px;
+    }
+    .buttons_container{
+        display: flex;
+        margin-top: 3%;
+    }
+    .home h2{
+        margin-top: -10px;
+    }
+    .cake, .bakery{
+        width: 400px;
+        height: 500px;
+    }
     footer i{
         font-size: 50px;
         margin-bottom: 1%;
