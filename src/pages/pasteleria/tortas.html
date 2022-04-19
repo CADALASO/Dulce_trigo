@@ -1,12 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../css/catalogo.css">
+    <script src="https://kit.fontawesome.com/bb22cb708c.js" crossorigin="anonymous"></script>
+    <title>Tortas</title>
 </head>
+
 <body>
-    
+    <div class="navbar_container">
+        <nav>
+            <input type="checkbox" id="chk-menu">
+            <label for="chk-menu" class="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <div class="items">
+                <div class="animation">
+                    <a href=" " class="item">Acerca de</a>
+                </div>
+                <div class="item2">
+                    <div class="animation">
+                        <a href=" " class="item">Productos personalizados</a>
+                    </div>
+                </div>
+                <div class="animation">
+                    <a href=" " class="item">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <header id="header_container">
+        <img src="../../utils/img/LogoDulceTrigo.svg" alt="" class="logo">
+        <div class="button-header">
+            <h3 class="header_title">“Traemos el dulce sabor que le hace falta a tu vida”</h3>
+            <div class="buttons_container">
+                <div class="button-search">
+                    <input type="search" id="search" name="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <!--<div class="input-wrapper">
+                    <input type="search" class="input" placeholder="Search">
+                  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
+                  </div>-->
+
+                <button type="submit">
+                    <i class="fa-solid fa-cart-shopping shop"></i>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="btn-pasteleria">
+        <button type="submit" class="seleccion">
+            <img src="../../utils/img/icon-tortas-v.svg"><p>Tortas</p>
+        </button>
+        <button type="submit" class="border-btn">
+            <img src="../../utils/img/icon-postres-v.svg"><p>Postres</p>
+        </button>
+        <button type="submit" class="border-btn">
+            <img src="../../utils/img/icon-galletas-v.svg"><p>Galletas</p>
+        </button>
+    </div>
+
+    <section id="container-tortas" class="tortas">
+            
+                <article>
+                    <a href="#modal" class="cta">
+                        <img src="../../utils/img/redvelvet.svg"></a>
+                    <p>Red velvet</p>
+                </article>
+
+                <section id="modal" class="modal">
+                    <div class="modalContainer">
+                        <div class="cerrarVentana">
+                            <a href="#section" class="modalClose">
+                                <i class="fa-solid fa-xmark"></i>
+                            </a>
+                        </div>
+
+                        <div class="ventana">
+                            <figure class="modalPicture">
+                                <img src="../../utils/img/redvelvet2.jpg" class="modalImg">
+                            </figure>
+                            <div>
+                                <h3 class="modalTitle">Red velvet</h3>
+                                <p class="modalP">Bizcocho de terciopelo rojo con un suave sabor a cacao
+                                    relleno de frosting de queso crema
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                    </div>
+                </section>
+
+                <article>
+                    <a href="">
+                        <img src="../../utils/img/arcoiris.svg"></a>
+                    <p>Arco iris</p>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="../../utils/img/arandanos.svg"></a>
+                    <p>Arandanos</p>
+                </article>
+           
+                <article>
+                    <a href="">
+                        <img src="../../utils/img/selvanegra.svg"></a>
+                    <p>Selva negra</p>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="../../utils/img/cocoyfresa.svg"></a>
+                    <p>Coco y fresas</p>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="../../utils/img/pistacho.svg"></a>
+                    <p>Pistacho y<br>
+                        frutos rojos</p>
+                </article>
+        
+                <article>
+                    <a href="">
+                        <img src="../../utils/img/zanahoria.svg"></a>
+                    <p>Zanahoria</p>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="../../utils/img/obsesion.svg"></a>
+                    <p>Obsesión</p>
+                </article>
+                <article>
+                    <a href="">
+                        <img src="../../utils/img/baileys.svg"></a>
+                    <p>Tres leches<br>
+                        de Baileys</p>
+                </article>
+            
+            </section>
+
+            <footer>
+                <div class="box-footer">
+                    <p>Políticas de privacidad|Términos y condiciones</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+
+            </footer>
+
 </body>
+
 </html>

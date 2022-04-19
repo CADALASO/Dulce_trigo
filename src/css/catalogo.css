@@ -1,0 +1,626 @@
+@font-face{
+    font-family: 'nesans';
+    src: url(../utils/fonts/NesansSemiBold.ttf);
+}
+
+@font-face{
+    font-family: 'breadley';
+    src: url(../utils/fonts/BreadleySans-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'delius';
+    src: url(../utils/fonts/Delius-Regular.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red-wine: #731627;
+    --pink-stick: #D9B1AD;
+    --white: #F6F5EE;
+    --dark-beige:#BF9775;
+    --golden: #AF8738;
+    --cream: #F0ECDE;
+    --black-rose:#2B0D16;
+    --light-red-wine: rgba(141,22,65,40%);
+    --beby-pink: #FACCC7;
+}
+body{
+    font-size: 16px;
+}
+
+/*.input-wrapper {
+    position: relative;
+    width: 271px;
+  }
+  
+  .input {
+    box-sizing: border-box;
+    color: #191919;
+    padding: 15px 15px 15px 35px;
+    width: 100%;
+  }
+
+  .input-icon {
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }*/
+  
+nav{
+    background-color: var(--red-wine);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 2px solid var(--pink-stick);
+}
+
+.navbar_container label{
+    padding: 8px 0px 8px 8px;
+}
+
+#chk-menu{
+    display: none;
+}
+#chk-menu:checked ~ .items{
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-menu{
+    color: var(--beby-pink);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 100vw;
+}
+.btn-menu i{
+    background-color: var(--pink-stick);
+    color: var(--red-wine);
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid var(--black-rose);
+    box-shadow: 2px 2px 1px 1px rgba(60, 6, 25, 0.9);
+}
+.items{
+    display: none;
+}
+
+.item{
+    color: var(--cream);
+    font-family: 'delius';
+    font-size: 20px;
+    text-decoration-line: none;
+    margin-top: 6%;
+}
+
+.item:hover{
+    text-shadow: 0.5px 0.5px 0.5px var(--red-wine);
+    padding-top: 8px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.animation{
+    padding: 8px;
+}
+
+.animation:hover{
+    animation: 1.5s anim 1;
+    transform-origin: top center;
+}
+
+@keyframes anim{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+#header_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2% 8% 0;
+}
+
+.logo{
+    font-size: 500px;
+}
+
+.header_title{
+    color: var(--black-rose);
+    text-align: center;
+    text-shadow: 0.3px 0.3px 0.2px var(--black-rose);
+    font-family: 'nesans';
+}
+
+.button-header{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.button-header button{
+    background-color: var(--pink-stick);
+    border: 1px solid var(--pink-stick);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+    padding: 8px;
+    box-shadow: 2px 2px 2px var(--red-wine);
+}
+
+.shop{
+    font-size: 20px;
+    color: var(--black-rose);
+}
+
+.button-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons_container{
+    display: flex;
+    margin-top: 3%;
+}
+
+.button-search{
+    display: flex;
+    background-color: var(--pink-stick);
+    box-shadow: 2px 2px 2px var(--red-wine);
+    border-radius: 25px;
+    margin-top: 8px;
+}
+
+.button-search input{
+    border: none;
+    border-radius: 30px;
+    background-color: var(--pink-stick);
+    width: 150px;
+    height: 30px;
+}
+
+.button-search i{
+    padding: 8px 8px 0 0;
+    color: var(--black-rose);
+    font-size: 20px;
+}
+
+footer{
+    background-image: url(../utils/img/footerDulceTrigo.svg);
+    background-size: cover;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+footer p{
+    font-size: 12px;
+    margin-bottom: 3rem;
+}
+
+footer i{
+  margin-bottom: 5%;  
+  font-size: 30px;
+  color: var(--cream);
+}
+
+/*tortas*/
+
+.btn-pasteleria{
+   display: flex;
+   justify-content: center;
+}
+
+.btn-pasteleria button{
+    display: flex;
+    width: 90%;
+    background-color: var(--pink-stick);
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+.btn-pasteleria img{
+    width: 30px;
+    margin: 5%;
+}
+
+.btn-pasteleria p{
+    padding: 8% 5%;
+    font-size: 15px;
+    font-family: 'delius';
+    text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
+}
+
+.border-btn{
+    border: 2px solid var(--pink-stick);
+}
+
+.seleccion{
+    border: 3px solid var(--black-rose);
+}
+
+#container-tortas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tortas{
+    margin-top: 10%;
+}
+
+.tortas article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+    
+.tortas img{
+     width: 85%;    
+    }
+
+.tortas p{
+    font-family: 'delius';
+    color: var(--black-rose);
+    text-shadow: 0.5px 0.5px 0.3px var(--black-rose);
+    font-size: 15px;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.441);
+    display: flex;
+    --opacity:0;
+    --pointer:none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity 1s;
+}
+
+.modal:target{
+    --opacity: 1;
+    --pointer: unset;
+}
+
+.modalContainer{
+    margin: auto;
+    background-color: var(--beby-pink);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+
+.cerrarVentana{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+
+.cerrarVentana i{
+    font-size: 24px;
+    color: var(--red-wine);
+}
+
+.ventana{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalPicture{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-bottom: 2em;
+}
+
+.modalImg{
+    border: 4px groove var(--red-wine);
+}
+
+.modalTitle{
+    font-family:'delius';
+    font-size: 18px;
+    color: var(--red-wine);
+}
+
+.modalContainer p{
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.modalCarrito{
+    display: inline-block;
+    border: 2px solid var(--red-wine);
+    background-color: var(--cream);
+    font-family: 'delius';
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: 700;
+    color: #333;
+    border-radius: 0.4em;
+}
+
+@media screen and (min-width:768px){
+
+    nav{
+        flex-direction: row;
+        align-items: center;
+        position: initial;
+     }
+
+     .items{
+        display: flex;
+        padding: 0.5rem;
+    }
+
+    
+    .item{
+        padding: 0 5rem 0 5rem;
+        font-size: 22px;
+    }
+
+    .item:hover{
+        font-size: 26px;
+    }
+
+    .item2{
+        border-right: 2px solid var(--beby-pink);
+        border-left: 2px solid var(--beby-pink);
+    }
+
+    .btn-menu{
+        display: none;
+    }
+
+    #header_container{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; 
+    }
+
+    .logo{
+        width: 48%;
+    }
+
+    .header_title{
+        width: 100%;
+        margin: 5% 0%;
+        font-size: 23px;
+    }
+    
+    .button-header{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+
+    .buttons_container{
+        display: flex;
+        margin-bottom: 8%;
+    }
+
+    .button-search{
+        margin-right: 5%;
+    }
+
+
+    footer p{
+        font-size: 13.5px;
+    }
+
+    footer i{
+        font-size: 40px;
+        margin-bottom: 3%;
+    }
+
+    .box-footer {
+        margin-top: -100px;
+    }
+
+    /*tortas*/
+
+        
+.btn-pasteleria{
+    flex-direction: column;
+}
+
+.btn-pasteleria button{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 140px;
+    border-end-start-radius: 0px;
+    border-end-end-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+     
+     .btn-pasteleria img{
+         width: 35px;
+         margin-top: 50%;
+         transform: rotate(-90deg);
+     }
+     
+     .btn-pasteleria p{
+         /*margin-bottom: 50%;
+         padding-left: 10%;*/
+         font-size: 15px;
+         font-family: 'delius';
+         text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
+         transform: rotate(-90deg);
+         
+     }
+     
+
+
+#container-tortas{
+    margin-bottom: 15px;
+    margin-top: -55%;
+} 
+
+.tortas article{
+    padding-left: 8%;
+}
+
+.tortas p{
+    font-size: 19px;
+}
+
+}
+
+@media screen and (min-width:1024px){
+
+    .logo{
+        font-size: 100px;
+    }
+
+    .header_title{
+        font-size: 28px;
+    }
+    footer p{
+        font-size: 18px;
+    }
+    footer i{
+        font-size: 60px;
+    }
+
+    /*Tortas*/
+
+    .btn-pasteleria button{
+        width: 60px;
+        height: 160px;
+        background-color: var(--pink-stick);
+        border-end-start-radius: 0px;
+        border-end-end-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+      
+         
+     .btn-pasteleria img{
+        width: 40px;
+        margin-top: 45%;
+        margin-bottom: -5%;
+    }
+    
+    .btn-pasteleria p{
+        font-size: 20px;
+        padding-top: 3%;
+    }
+    
+    
+    #container-tortas{
+        margin-bottom: 15px;
+        margin-top: -50%;
+    } 
+    
+    .tortas article{
+        padding-left: 3%;
+    }
+
+
+.tortas{
+    margin-top: -15%;
+}
+    
+.tortas img{
+     width: 110%;   
+     padding: 15px 40px 10px 30px; 
+    }
+
+.tortas p{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+}
+
+@media screen and (min-width:1200px){
+    footer i{
+        font-size: 50px;
+        margin-bottom: 1%;
+    }
+
+     /*Tortas*/
+
+         
+     .btn-pasteleria img{
+        width: 50px;
+        margin-top: 45%;
+        margin-bottom: -5%;
+    }
+    
+    .btn-pasteleria p{
+        font-size: 20px;
+        padding-top: 3%;
+    }
+
+     .btn-pasteleria button{
+        width: 55px;
+        height: 170px;
+    }
+         
+         
+         .btn-pasteleria p{
+             padding: 8% 5%;
+             font-size: 19px;
+             font-family: 'delius';
+             text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
+         }
+         
+    
+    
+    #container-tortas{
+        margin-bottom: 15px;
+        margin-top: -43%;
+    } 
+    
+    .tortas article{
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+.tortas img{
+     width: 130%; 
+     padding: 15px 20px 10px 10px; 
+    }
+
+.tortas p{
+    font-size: 22px;
+}
+
+}
