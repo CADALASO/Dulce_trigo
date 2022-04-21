@@ -1,0 +1,957 @@
+@font-face{
+    font-family: 'nesans';
+    src: url(../utils/fonts/NesansSemiBold.ttf);
+}
+
+@font-face{
+    font-family: 'breadley';
+    src: url(../utils/fonts/BreadleySans-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'delius';
+    src: url(../utils/fonts/Delius-Regular.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red-wine: #731627;
+    --pink-stick: #D9B1AD;
+    --white: #F6F5EE;
+    --dark-beige:#BF9775;
+    --golden: #AF8738;
+    --cream: #F0ECDE;
+    --black-rose:#2B0D16;
+    --light-red-wine: rgba(141,22,65,40%);
+    --beby-pink: #FACCC7;
+}
+body{
+    font-size: 16px;
+}
+
+/*.input-wrapper {
+    position: relative;
+    width: 271px;
+  }
+  
+  .input {
+    box-sizing: border-box;
+    color: #191919;
+    padding: 15px 15px 15px 35px;
+    width: 100%;
+  }
+
+  .input-icon {
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }*/
+  
+  nav{
+    background-color: var(--red-wine);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.5rem;
+}
+
+hr{
+    background-color: var(--red-wine);
+    width: 100%;
+    height: 4px;
+    margin-top: 2px;
+}
+
+.navbar_container label{
+    padding: 8px 0px 8px 8px;
+}
+
+#chk-menu{
+    display: none;
+}
+
+#chk-menu:checked ~ .items{
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-menu{
+    color: var(--beby-pink);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 100%
+}
+
+.btn-menu i{
+    background-color: var(--pink-stick);
+    color: var(--black-rose);
+    padding: 5px 6px;
+    border-radius: 10px;
+    border: 1px solid var(--red-wine);
+    box-shadow: 4px 4px 6px var(--black-rose);
+}
+
+.items{
+    display: none;
+    font-family: 'delius';
+    font-size: 20px;
+}
+
+.item1{
+    color: var(--white);
+    margin: 7px;
+    text-decoration: none;
+}
+.item1:hover{
+    color: rgba(248, 245, 246, 0.8);
+    text-decoration: solid var(--cream);
+    transform: scale(1.2);
+    transition: transform ;
+    text-decoration: underline;
+}
+
+#header-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+#header-container img{
+    margin-top: 10px;
+    width: 250px;
+}
+.header-title{
+    color: var(--black-rose);
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0.5px var(--black-rose);
+    font-family: 'nesans';
+    font-size: 22px;
+}
+.button-header{
+    display: flex;
+    justify-content: center;
+}
+.button-header button{
+    background-color: var(--pink-stick);
+    border: 0.5px solid var(--red-wine);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+    padding: 8px;
+    box-shadow: 4px 4px 6px var(--black-rose);
+}
+.shop{
+    font-size: 20px;
+    color: var(--black-rose);
+}
+.button-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons-container{
+    display: flex;
+    margin-top: 3%;
+}
+
+.buttons-container input{
+    border: 0.5px solid var(--red-wine);
+    border-radius: 30px;
+    background-color: var(--pink-stick);
+    box-shadow: 4px 4px 6px var(--black-rose);
+    width: 150px;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.buttons-container input::placeholder{
+    color: var(--black-rose);
+    font-size: 20px;
+    text-align: end;
+}
+
+
+.logo{
+    font-size: 500px;
+}
+
+.header_title{
+    color: var(--black-rose);
+    text-align: center;
+    text-shadow: 0.3px 0.3px 0.2px var(--black-rose);
+    font-family: 'nesans';
+}
+
+
+.shop{
+    font-size: 20px;
+    color: var(--black-rose);
+}
+
+.buttons_container{
+    display: flex;
+    margin-top: 3%;
+}
+
+footer{
+    width: 100%;
+    background-image: url(../utils/img/footerDulceTrigo.svg);
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+footer p{
+    margin-bottom: 3rem;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'delius';
+}
+footer i{
+    margin: 0 1% 3% 1%;  
+    font-size: 25px;
+    color: var(--cream);
+}
+
+
+/*tortas*/
+
+.btn-pasteleria{
+   display: flex;
+   justify-content: center;
+   margin-top: 5%;
+}
+
+.btn-pasteleria button{
+    display: flex;
+    width: 90%;
+    background-color: var(--pink-stick);
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+.btn-pasteleria a{
+    text-decoration-line: none;
+    color: var(--black-rose);
+}
+
+.btn-pasteleria img{
+    width: 30px;
+    margin: 5%;
+}
+
+.btn-pasteleria p{
+    padding: 8% 5%;
+    font-size: 15px;
+    font-family: 'delius';
+    text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
+}
+
+.border-btn{
+    border: 2px solid var(--pink-stick);
+}
+
+.seleccion{
+    border: 3px solid var(--black-rose);
+}
+
+#container-tortas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tortas{
+    margin-top: 10%;
+}
+
+.tortas article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+    
+.tortas img{
+     width: 85%;    
+    }
+
+.tortas p{
+    font-family: 'delius';
+    color: var(--black-rose);
+    text-shadow: 0.5px 0.5px 0.3px var(--black-rose);
+    font-size: 15px;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.441);
+    display: flex;
+    --opacity:0;
+    --pointer:none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity 1s;
+}
+
+
+.modal:target{
+    --opacity: 1;
+    --pointer: unset;
+}
+
+.modalContainer{
+    margin: auto;
+    background-color: var(--beby-pink);
+    width: 90%;
+    max-width: 600px;
+    height: 470px;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+
+.modalContainer2{
+    margin: auto;
+    background-color: var(--beby-pink);
+    width: 90%;
+    max-width: 700px;
+    height: 490px;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+
+
+.modalContainer2 p{
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    line-height: 1.2;
+    font-size: 13px;
+}
+
+.cerrarVentana{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+
+.cerrarVentana i{
+    font-size: 24px;
+    color: var(--red-wine);
+}
+
+.ventana{
+    display: flex;
+    flex-direction: column;
+}
+
+.ventana img{
+    width: 200px;
+    margin: auto;
+}
+
+.modalTitle{
+    font-family:'delius';
+    font-size: 16px;
+    color: var(--red-wine);
+    padding-top: 4%;
+}
+
+.modalContainer p{
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    line-height: 1.2;
+    font-size: 13px;
+}
+
+.option-cakes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-cakes label,p{
+    font-family: 'delius';
+    font-size: 13px;
+}
+
+.option1{
+    margin: auto;
+}
+
+.btn-window-cakes{
+    display: flex;
+    justify-content: center;
+    padding: 1% 0 5% 0;
+}
+
+.btn-window-cakes button{
+    border-radius: 50%;
+    background-color: var(--cream);
+    border: 1px solid var(--black-rose);
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.btn-window-cakes i{
+    color: var(--black-rose);
+}
+
+.btn-window-cakes h3{
+    font-family: 'delius';
+    padding: 5px;
+}
+
+
+.modalCarrito{
+    border: 2px solid var(--red-wine);
+    background-color: var(--cream);
+    font-family: 'delius';
+    padding: 0.2em 0.5em;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: #333;
+    border-radius: 0.4em;
+}
+
+@media screen and (min-width:768px){
+
+    nav{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        padding: auto 0;
+    }
+    .btn-menu{
+        display: none;
+    }
+    .items{
+        display: flex;
+        margin: 1rem auto;
+        align-items: center;
+    }
+    .item1{
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: var(--white);
+        margin: auto 2.1rem;
+    }
+
+    .line-nav{
+        width: 3px;
+        height: 2.2rem;
+        background-color:var(--cream);
+        border-radius: 20px;
+        border: none;
+    }
+
+    .item1:hover{
+        margin:auto 3rem;
+        font-size: 1.4rem;
+    }
+   
+    .border{
+        border-left: 2px solid var(--white);
+        border-right: 2px solid var(--white);
+    }
+
+    .btn-menu{
+        display: none;
+    }
+
+    #header-container{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #header-container img{
+        width: 350px;
+    }
+
+    .logo{
+        width: 48%;
+    }
+
+    .header-title{
+        font-size: 23px;
+    }
+    .button-header{
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+
+    .buttons-container{
+        display: flex;
+        margin: 3% 0 17% 0;
+    }
+
+    footer{
+        margin-top: 30px;
+    }
+    footer p{
+        margin-bottom: 3.5rem;
+        font-size: 12px;
+    }
+    footer i{
+        font-size: 30px;
+        margin: 0 1% 2% 1%;  
+    }
+
+    .box-footer {
+        margin-top: -100px;
+    }
+
+    /*tortas*/
+
+        
+.btn-pasteleria{
+    flex-direction: column;
+}
+
+.btn-pasteleria button{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 140px;
+    border-end-start-radius: 0px;
+    border-end-end-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+     
+     .btn-pasteleria img{
+         width: 35px;
+         margin-top: 50%;
+         transform: rotate(-90deg);
+     }
+     
+     .btn-pasteleria p{
+         /*margin-bottom: 50%;
+         padding-left: 10%;*/
+         font-size: 15px;
+         font-family: 'delius';
+         text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
+         transform: rotate(-90deg);
+         
+     }
+     
+
+
+#container-tortas{
+    margin-bottom: 15px;
+    margin-top: -55%;
+} 
+
+.tortas article{
+    padding-left: 8%;
+}
+
+.tortas p{
+    font-size: 19px;
+}
+
+/*Ventana emergentes*/
+
+
+.modalContainer{
+    width: 70%;
+    height: 370px;
+    padding: 2em 2em;
+}
+
+.ventana{
+    flex-direction: row;
+}
+
+.ventana img{
+    width: 220px;
+}
+
+.modalTitle{
+    padding-top: 0px;
+    font-size: 20px;
+}
+
+.modalContainer p{
+    margin: 1em 1em 1em 1em;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modalContainer2{
+    height: 420px;
+}
+
+.modalContainer2 p{
+    margin: 0.5em 0.5em 1.5em 1em;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.option1{
+    margin: 0.5em 0.5em 1.5em 1em;
+}
+
+.modalCarrito{
+    margin-top: 2%;
+    padding: 0.5em 0.8em;
+    font-size: 16px;
+}
+
+.btn-car{
+    margin: -12% 14% 10% 0%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-window-cakes{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1% 0 5% 16%;
+}
+
+.btn-window-cakes button{
+    border-radius: 50%;
+    background-color: var(--cream);
+    border: 1px solid var(--black-rose);
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.btn-window-cakes h3{
+    font-family: 'delius';
+    padding: 5px;
+    color: var(--black-rose);
+}
+
+
+}
+
+@media screen and (min-width:1024px){
+
+    .line-nav{
+        height: 2.6rem;
+    }
+
+    .items{
+        justify-content: space-between;
+    }
+    .item1{
+        margin: auto 4.5rem;
+        font-size: 1.7rem;
+    }
+
+    .item1:hover{
+        margin: auto 5rem;
+        font-size: 1.7rem;
+    }
+
+    #header-container img{
+        width: 420px;
+    }
+    .shop, .button-search i{
+        font-size: 25px;
+    }
+    .header-title{
+        font-size: 34px;
+    }
+
+    .logo{
+        font-size: 100px;
+    }
+
+    
+    footer{
+        height: 150px;
+    }
+    footer p{
+        margin-bottom: 5rem;
+        font-size: 14px;
+    }
+    footer i{
+        font-size: 45px;
+    }
+
+    /*Tortas*/
+
+    .btn-pasteleria button{
+        width: 60px;
+        height: 160px;
+        background-color: var(--pink-stick);
+        border-end-start-radius: 0px;
+        border-end-end-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+      
+         
+     .btn-pasteleria img{
+        width: 40px;
+        margin-top: 45%;
+        margin-bottom: -5%;
+    }
+    
+    .btn-pasteleria p{
+        font-size: 20px;
+        padding-top: 3%;
+    }
+    
+    
+    #container-tortas{
+        margin-bottom: 15px;
+        margin-top: -50%;
+    } 
+    
+    .tortas article{
+        padding-left: 3%;
+    }
+
+
+.tortas{
+    margin-top: -15%;
+}
+    
+.tortas img{
+     width: 110%;   
+     padding: 15px 40px 10px 30px; 
+    }
+
+.tortas p{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+/*Ventana emergentes*/
+
+
+.cerrarVentana{
+    margin: 0% 2% -2% 1%;
+}
+
+.cerrarVentana i{
+    font-size: 26px;
+}
+
+.modalContainer{
+    width: 100%;
+    height:550px;
+}
+
+.modalContainer2{
+    height: 510px;
+}
+
+.modalContainer2 p{
+    width: 100%;
+    margin: 0.5em 0.5em 1.5em 1em;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.ventana img{
+    margin-top: 10%;
+    padding-top: -1%;
+    margin-left: -6%;
+    width: 360px;
+}
+
+.modalTitle{
+    padding-top:30%;
+    font-size: 24px;
+    margin-right: 1.5em;
+}
+
+.modalContainer p{
+    margin: 1em 1.5em 1em -1em;
+    font-size: 19px;
+}
+
+.btn-car{
+    margin: 2% 3% 10% 0%;
+}
+
+.modalCarrito{
+    margin-bottom: 3%;
+    padding: 0.5em 0.8em;
+    font-size: 20px;
+}
+
+.option-cakes{
+    margin-right: 22%;
+}
+
+.option-cakes label{
+    font-size: 20px;
+}
+
+.option-cakes p{
+    margin: 4px 3px 10px 5px;
+}
+
+.btn-window-cakes{
+    margin-top: -22%;
+    padding: 1% 0 5% 20%;
+}
+
+.btn-window-cakes button{
+    border-radius: 50%;
+    background-color: var(--cream);
+    border: 1px solid var(--black-rose);
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.btn-window-cakes h3{
+    font-family: 'delius';
+    padding: 8px;
+    color: var(--black-rose);
+}
+
+}
+
+@media screen and (min-width:1200px){
+
+    .item1{
+        margin: auto 5.5rem;
+        font-size: 2rem;
+    }
+
+    .item1:hover{
+        font-size: 2.1rem;
+    }
+
+    #header-container img{
+        width: 450px;
+    }
+    .shop, .button-search i{
+        font-size: 30px;
+    }
+    .header-title{
+        font-size: 42px;
+    }
+
+    .buttons-container input{
+        height: 50px;
+        width: 180px;
+    }
+
+    footer p{
+        font-size: 16px;
+    }
+
+     /*Tortas*/
+
+         
+     .btn-pasteleria img{
+        width: 50px;
+        margin-top: 45%;
+        margin-bottom: -5%;
+    }
+    
+    .btn-pasteleria p{
+        font-size: 20px;
+        padding-top: 3%;
+    }
+
+     .btn-pasteleria button{
+        width: 55px;
+        height: 170px;
+    }
+         
+         
+         .btn-pasteleria p{
+             padding: 8% 5%;
+             font-size: 19px;
+             font-family: 'delius';
+             text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
+         }
+         
+
+    #container-tortas{
+        margin-bottom: 15px;
+        margin-top: -40%;
+    } 
+    
+    .tortas article{
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+.tortas img{
+     width: 130%; 
+     padding: 15px 20px 10px 10px; 
+    }
+
+.tortas p{
+    font-size: 22px;
+}
+
+/*Ventana emergente*/
+
+.cerrarVentana i{
+    font-size: 26px;
+}
+
+.modalContainer{
+    width: 150%;
+    
+    padding: 1.5em 2em;
+}
+
+.ventana img{
+    width: 360px;
+}
+
+.modalTitle{
+    padding-top: 12px;
+    font-size: 26px;
+}
+
+.modalContainer p{
+    margin: 1em 0.5em 1em 0em;
+    font-size: 18.5px;
+}
+
+.modalCarrito{
+    margin-bottom: 3%;
+    padding: 0.5em 0.8em;
+    font-size: 20px;
+}
+
+.modalTitle{
+    padding-top:35%;
+}
+
+.btn-window-cakes{
+    margin-top: -13%;
+}
+
+
+}
