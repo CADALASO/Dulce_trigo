@@ -56,13 +56,20 @@ body{
     transform: translateY(-50%);
   }*/
   
-nav{
+  nav{
     background-color: var(--red-wine);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border: 2px solid var(--pink-stick);
+    padding: 0.5rem;
+}
+
+hr{
+    background-color: var(--red-wine);
+    width: 100%;
+    height: 4px;
+    margin-top: 2px;
 }
 
 .navbar_container label{
@@ -72,6 +79,7 @@ nav{
 #chk-menu{
     display: none;
 }
+
 #chk-menu:checked ~ .items{
     display: block;
     display: flex;
@@ -82,59 +90,98 @@ nav{
     color: var(--beby-pink);
     font-size: 1.5rem;
     cursor: pointer;
-    width: 100vw;
+    width: 100%
 }
+
 .btn-menu i{
     background-color: var(--pink-stick);
-    color: var(--red-wine);
-    padding: 7px;
-    border-radius: 5px;
-    border: 1px solid var(--black-rose);
-    box-shadow: 2px 2px 1px 1px rgba(60, 6, 25, 0.9);
+    color: var(--black-rose);
+    padding: 5px 6px;
+    border-radius: 10px;
+    border: 1px solid var(--red-wine);
+    box-shadow: 4px 4px 6px var(--black-rose);
 }
+
 .items{
     display: none;
-}
-
-.item{
-    color: var(--cream);
     font-family: 'delius';
     font-size: 20px;
-    text-decoration-line: none;
-    margin-top: 6%;
 }
 
-.item:hover{
-    text-shadow: 0.5px 0.5px 0.5px var(--red-wine);
-    padding-top: 8px;
-    padding-bottom: 10px;
-    font-size: 20px;
+.item1{
+    color: var(--white);
+    margin: 7px;
+    text-decoration: none;
+}
+.item1:hover{
+    color: rgba(248, 245, 246, 0.8);
+    text-decoration: solid var(--cream);
+    transform: scale(1.2);
+    transition: transform ;
+    text-decoration: underline;
 }
 
-.animation{
-    padding: 8px;
-}
-
-.animation:hover{
-    animation: 1.5s anim 1;
-    transform-origin: top center;
-}
-
-@keyframes anim{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.1);
-    }
-}
-
-#header_container{
+#header-container{
+    width: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 2% 8% 0;
+    align-items: center;
+    margin: 0 auto;
 }
+#header-container img{
+    margin-top: 10px;
+    width: 250px;
+}
+.header-title{
+    color: var(--black-rose);
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0.5px var(--black-rose);
+    font-family: 'nesans';
+    font-size: 22px;
+}
+.button-header{
+    display: flex;
+    justify-content: center;
+}
+.button-header button{
+    background-color: var(--pink-stick);
+    border: 0.5px solid var(--red-wine);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+    padding: 8px;
+    box-shadow: 4px 4px 6px var(--black-rose);
+}
+.shop{
+    font-size: 20px;
+    color: var(--black-rose);
+}
+.button-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons-container{
+    display: flex;
+    margin-top: 3%;
+}
+
+.buttons-container input{
+    border: 0.5px solid var(--red-wine);
+    border-radius: 30px;
+    background-color: var(--pink-stick);
+    box-shadow: 4px 4px 6px var(--black-rose);
+    width: 150px;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.buttons-container input::placeholder{
+    color: var(--black-rose);
+    font-size: 20px;
+    text-align: end;
+}
+
 
 .logo{
     font-size: 500px;
@@ -147,31 +194,10 @@ nav{
     font-family: 'nesans';
 }
 
-.button-header{
-    display: flex;
-    justify-content: center;
-    margin: 15px;
-}
-
-.button-header button{
-    background-color: var(--pink-stick);
-    border: 1px solid var(--pink-stick);
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    padding: 8px;
-    box-shadow: 2px 2px 2px var(--red-wine);
-}
 
 .shop{
     font-size: 20px;
     color: var(--black-rose);
-}
-
-.button-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .buttons_container{
@@ -179,54 +205,35 @@ nav{
     margin-top: 3%;
 }
 
-.button-search{
-    display: flex;
-    background-color: var(--pink-stick);
-    box-shadow: 2px 2px 2px var(--red-wine);
-    border-radius: 25px;
-    margin-top: 8px;
-}
-
-.button-search input{
-    border: none;
-    border-radius: 30px;
-    background-color: var(--pink-stick);
-    width: 150px;
-    height: 30px;
-}
-
-.button-search i{
-    padding: 8px 8px 0 0;
-    color: var(--black-rose);
-    font-size: 20px;
-}
-
 footer{
+    width: 100%;
     background-image: url(../utils/img/footerDulceTrigo.svg);
     background-size: cover;
-    height: 150px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     text-align: center;
 }
-
 footer p{
-    font-size: 12px;
     margin-bottom: 3rem;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'delius';
+}
+footer i{
+    margin: 0 1% 3% 1%;  
+    font-size: 25px;
+    color: var(--cream);
 }
 
-footer i{
-  margin-bottom: 5%;  
-  font-size: 30px;
-  color: var(--cream);
-}
 
 /*tortas*/
 
 .btn-pasteleria{
    display: flex;
    justify-content: center;
+   margin-top: 5%;
 }
 
 .btn-pasteleria button{
@@ -235,6 +242,11 @@ footer i{
     background-color: var(--pink-stick);
     border-end-start-radius: 10px;
     border-end-end-radius: 10px;
+}
+
+.btn-pasteleria a{
+    text-decoration-line: none;
+    color: var(--black-rose);
 }
 
 .btn-pasteleria img{
@@ -303,6 +315,7 @@ footer i{
     transition: opacity 1s;
 }
 
+
 .modal:target{
     --opacity: 1;
     --pointer: unset;
@@ -313,11 +326,31 @@ footer i{
     background-color: var(--beby-pink);
     width: 90%;
     max-width: 600px;
-    max-height: 90%;
+    height: 470px;
     overflow: hidden;
     text-align: center;
     padding: 2.5em 1.5em;
     border-radius: 1em;
+}
+
+.modalContainer2{
+    margin: auto;
+    background-color: var(--beby-pink);
+    width: 90%;
+    max-width: 700px;
+    height: 490px;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+
+
+.modalContainer2 p{
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    line-height: 1.2;
+    font-size: 13px;
 }
 
 .cerrarVentana{
@@ -337,38 +370,72 @@ footer i{
     flex-direction: column;
 }
 
-.modalPicture{
-    width: 80%;
-    margin: 0 auto;
-    max-width: 400px;
-    margin-bottom: 2em;
-}
-
-.modalImg{
-    border: 4px groove var(--red-wine);
+.ventana img{
+    width: 200px;
+    margin: auto;
 }
 
 .modalTitle{
     font-family:'delius';
-    font-size: 18px;
+    font-size: 16px;
     color: var(--red-wine);
+    padding-top: 4%;
 }
 
 .modalContainer p{
     margin-top: 0.5em;
     margin-bottom: 1em;
-    line-height: 1.5;
-    font-size: 15px;
+    line-height: 1.2;
+    font-size: 13px;
 }
 
+.option-cakes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-cakes label,p{
+    font-family: 'delius';
+    font-size: 13px;
+}
+
+.option1{
+    margin: auto;
+}
+
+.btn-window-cakes{
+    display: flex;
+    justify-content: center;
+    padding: 1% 0 5% 0;
+}
+
+.btn-window-cakes button{
+    border-radius: 50%;
+    background-color: var(--cream);
+    border: 1px solid var(--black-rose);
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.btn-window-cakes i{
+    color: var(--black-rose);
+}
+
+.btn-window-cakes h3{
+    font-family: 'delius';
+    padding: 5px;
+}
+
+
 .modalCarrito{
-    display: inline-block;
     border: 2px solid var(--red-wine);
     background-color: var(--cream);
     font-family: 'delius';
-    padding: 0.5em 1em;
+    padding: 0.2em 0.5em;
     text-decoration: none;
     font-weight: 700;
+    font-size: 15px;
     color: #333;
     border-radius: 0.4em;
 }
@@ -376,74 +443,84 @@ footer i{
 @media screen and (min-width:768px){
 
     nav{
+        width: 100%;
         flex-direction: row;
-        align-items: center;
-        position: initial;
-     }
-
-     .items{
+        justify-content: center;
+        padding: auto 0;
+    }
+    .btn-menu{
+        display: none;
+    }
+    .items{
         display: flex;
-        padding: 0.5rem;
+        margin: 1rem auto;
+        align-items: center;
+    }
+    .item1{
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: var(--white);
+        margin: auto 2.1rem;
     }
 
-    
-    .item{
-        padding: 0 5rem 0 5rem;
-        font-size: 22px;
+    .line-nav{
+        width: 3px;
+        height: 2.2rem;
+        background-color:var(--cream);
+        border-radius: 20px;
+        border: none;
     }
 
-    .item:hover{
-        font-size: 26px;
+    .item1:hover{
+        margin:auto 3rem;
+        font-size: 1.4rem;
     }
-
-    .item2{
-        border-right: 2px solid var(--beby-pink);
-        border-left: 2px solid var(--beby-pink);
+   
+    .border{
+        border-left: 2px solid var(--white);
+        border-right: 2px solid var(--white);
     }
 
     .btn-menu{
         display: none;
     }
 
-    #header_container{
-        display: flex;
+    #header-container{
         flex-direction: row;
-        align-items: flex-start; 
+        align-items: flex-start;
+    }
+
+    #header-container img{
+        width: 350px;
     }
 
     .logo{
         width: 48%;
     }
 
-    .header_title{
-        width: 100%;
-        margin: 5% 0%;
+    .header-title{
         font-size: 23px;
     }
-    
     .button-header{
-        display: flex;
         align-items: flex-end;
         flex-direction: column-reverse;
     }
 
-    .buttons_container{
+    .buttons-container{
         display: flex;
-        margin-bottom: 8%;
+        margin: 3% 0 17% 0;
     }
 
-    .button-search{
-        margin-right: 5%;
+    footer{
+        margin-top: 30px;
     }
-
-
     footer p{
-        font-size: 13.5px;
+        margin-bottom: 3.5rem;
+        font-size: 12px;
     }
-
     footer i{
-        font-size: 40px;
-        margin-bottom: 3%;
+        font-size: 30px;
+        margin: 0 1% 2% 1%;  
     }
 
     .box-footer {
@@ -500,22 +577,126 @@ footer i{
     font-size: 19px;
 }
 
+/*Ventana emergentes*/
+
+
+.modalContainer{
+    width: 70%;
+    height: 370px;
+    padding: 2em 2em;
+}
+
+.ventana{
+    flex-direction: row;
+}
+
+.ventana img{
+    width: 220px;
+}
+
+.modalTitle{
+    padding-top: 0px;
+    font-size: 20px;
+}
+
+.modalContainer p{
+    margin: 1em 1em 1em 1em;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modalContainer2{
+    height: 420px;
+}
+
+.modalContainer2 p{
+    margin: 0.5em 0.5em 1.5em 1em;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.option1{
+    margin: 0.5em 0.5em 1.5em 1em;
+}
+
+.modalCarrito{
+    margin-top: 2%;
+    padding: 0.5em 0.8em;
+    font-size: 16px;
+}
+
+.btn-car{
+    margin: -12% 14% 10% 0%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-window-cakes{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1% 0 5% 16%;
+}
+
+.btn-window-cakes button{
+    border-radius: 50%;
+    background-color: var(--cream);
+    border: 1px solid var(--black-rose);
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.btn-window-cakes h3{
+    font-family: 'delius';
+    padding: 5px;
+    color: var(--black-rose);
+}
+
+
 }
 
 @media screen and (min-width:1024px){
+
+    .line-nav{
+        height: 2.6rem;
+    }
+
+    .items{
+        justify-content: space-between;
+    }
+    .item1{
+        margin: auto 4.5rem;
+        font-size: 1.7rem;
+    }
+
+    .item1:hover{
+        margin: auto 5rem;
+        font-size: 1.7rem;
+    }
+
+    #header-container img{
+        width: 420px;
+    }
+    .shop, .button-search i{
+        font-size: 25px;
+    }
+    .header-title{
+        font-size: 34px;
+    }
 
     .logo{
         font-size: 100px;
     }
 
-    .header_title{
-        font-size: 28px;
+    
+    footer{
+        height: 150px;
     }
     footer p{
-        font-size: 18px;
+        margin-bottom: 5rem;
+        font-size: 14px;
     }
     footer i{
-        font-size: 60px;
+        font-size: 45px;
     }
 
     /*Tortas*/
@@ -567,12 +748,122 @@ footer i{
     padding-bottom: 15px;
 }
 
+/*Ventana emergentes*/
+
+
+.cerrarVentana{
+    margin: 0% 2% -2% 1%;
+}
+
+.cerrarVentana i{
+    font-size: 26px;
+}
+
+.modalContainer{
+    width: 100%;
+    height:550px;
+}
+
+.modalContainer2{
+    height: 510px;
+}
+
+.modalContainer2 p{
+    width: 100%;
+    margin: 0.5em 0.5em 1.5em 1em;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.ventana img{
+    margin-top: 10%;
+    padding-top: -1%;
+    margin-left: -6%;
+    width: 360px;
+}
+
+.modalTitle{
+    padding-top:30%;
+    font-size: 24px;
+    margin-right: 1.5em;
+}
+
+.modalContainer p{
+    margin: 1em 1.5em 1em -1em;
+    font-size: 19px;
+}
+
+.btn-car{
+    margin: 2% 3% 10% 0%;
+}
+
+.modalCarrito{
+    margin-bottom: 3%;
+    padding: 0.5em 0.8em;
+    font-size: 20px;
+}
+
+.option-cakes{
+    margin-right: 22%;
+}
+
+.option-cakes label{
+    font-size: 20px;
+}
+
+.option-cakes p{
+    margin: 4px 3px 10px 5px;
+}
+
+.btn-window-cakes{
+    margin-top: -22%;
+    padding: 1% 0 5% 20%;
+}
+
+.btn-window-cakes button{
+    border-radius: 50%;
+    background-color: var(--cream);
+    border: 1px solid var(--black-rose);
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.btn-window-cakes h3{
+    font-family: 'delius';
+    padding: 8px;
+    color: var(--black-rose);
+}
+
 }
 
 @media screen and (min-width:1200px){
-    footer i{
-        font-size: 50px;
-        margin-bottom: 1%;
+
+    .item1{
+        margin: auto 5.5rem;
+        font-size: 2rem;
+    }
+
+    .item1:hover{
+        font-size: 2.1rem;
+    }
+
+    #header-container img{
+        width: 450px;
+    }
+    .shop, .button-search i{
+        font-size: 30px;
+    }
+    .header-title{
+        font-size: 42px;
+    }
+
+    .buttons-container input{
+        height: 50px;
+        width: 180px;
+    }
+
+    footer p{
+        font-size: 16px;
     }
 
      /*Tortas*/
@@ -602,11 +893,10 @@ footer i{
              text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
          }
          
-    
-    
+
     #container-tortas{
         margin-bottom: 15px;
-        margin-top: -43%;
+        margin-top: -40%;
     } 
     
     .tortas article{
@@ -622,5 +912,46 @@ footer i{
 .tortas p{
     font-size: 22px;
 }
+
+/*Ventana emergente*/
+
+.cerrarVentana i{
+    font-size: 26px;
+}
+
+.modalContainer{
+    width: 150%;
+    
+    padding: 1.5em 2em;
+}
+
+.ventana img{
+    width: 360px;
+}
+
+.modalTitle{
+    padding-top: 12px;
+    font-size: 26px;
+}
+
+.modalContainer p{
+    margin: 1em 0.5em 1em 0em;
+    font-size: 18.5px;
+}
+
+.modalCarrito{
+    margin-bottom: 3%;
+    padding: 0.5em 0.8em;
+    font-size: 20px;
+}
+
+.modalTitle{
+    padding-top:35%;
+}
+
+.btn-window-cakes{
+    margin-top: -13%;
+}
+
 
 }
