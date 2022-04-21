@@ -1,8 +1,10 @@
 @font-face{
     font-family: 'nesans';
-    src: url(../fonts/NesansSemiBold.ttf);
+    src: url(../utils/fonts/Nesans\ Semi\ Bold.ttf);
+}
+@font-face{
     font-family: 'breadley';
-    src: url(../fonts/BreadleySans-Regular.ttf);
+    src: url(../utils/fonts/BreadleySans-Regular.ttf);
 }
 @font-face{
     font-family: 'delius';
@@ -10,7 +12,7 @@
 }
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
     box-sizing: border-box;
 }
 :root{
@@ -146,7 +148,60 @@ hr{
     color: var(--black-rose);
     font-size: 20px;
 }
-
+/*carrito de compras*/
+h1{
+    font-family: 'breadley';
+    color: var(--red-wine);
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px var(--black-rose);
+    margin: 1.5rem auto;
+}
+table{
+    border-collapse: collapse;
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+}
+th{
+    background-color: var(--cream);
+    font-family: 'breadley';
+    color: var(--red-wine);
+    border: 2px solid var(--red-wine);
+    padding: 5px ;
+}
+td{
+    text-align: center;
+    border-bottom: 1px solid var(--red-wine);
+    color: var(--black-rose);
+    font-family: 'delius';
+}
+.item1{
+    width: 30%;
+}
+.product{
+    text-align: start;
+    padding: 5px;
+}
+.final-items{
+    text-align: end;
+    padding: 5px;
+}
+.pay{
+    display: flex;
+    justify-content: space-between;
+}
+.buttons-shop {
+    background-color: var(--red-wine);
+    color: var(--white);
+    border-radius: 70px;
+    width: 80px;
+    height: 25px;
+    margin: 20px 20px;
+    font-family: 'delius';
+    box-shadow: 2px 2px 2px var(--black-rose);
+}
+/*carro de compras*/
 footer{
     width: 100%;
     background-image: url(../utils/img/footerDulceTrigo.svg);
@@ -217,7 +272,21 @@ footer i{
     .header-title{
         font-size: 25px;
     }
-    
+    /*carro de compras*/
+    h1{
+        font-size: 50px;
+        margin-bottom: 2rem;
+    }
+    th{
+        font-size: 25px;
+    }
+    .buttons-shop{
+        font-size: 16px;
+        height: 26px;
+        width: 100px;
+        margin: 2rem 4rem;
+    }
+    /*carro de compras*/
     footer{
         margin-top: 30px;
     }
@@ -251,6 +320,24 @@ footer i{
     font-size: 1.7rem;
     margin: auto 4.5rem;
     }
+     /*carro de compras*/
+     h1{
+        font-size: 60px;
+        margin-bottom: 3rem;
+    }
+    th{
+        font-size: 30px;
+    }
+    .buttons-shop{
+        font-size: 20px;
+        height: 32px;
+        width: 124px;
+        margin: 2rem 6rem;
+    }
+    td{
+        font-size: 20px;
+    }
+    /*carro de compras*/
     footer{
         height: 150px;
     }
@@ -283,6 +370,24 @@ footer i{
     .item:hover{
         font-size: 2.1rem;
     }
+     /*carro de compras*/
+     h1{
+        font-size: 70px;
+        margin-bottom: 3rem;
+    }
+    th{
+        font-size: 40px;
+    }
+    .buttons-shop{
+        font-size: 25px;
+        height: 35px;
+        width: 130px;
+        margin: 2rem 8rem;
+    }
+    td{
+        font-size: 25px;
+    }
+    /*carro de compras*/
     footer p{
         font-size: 16px;
     }
