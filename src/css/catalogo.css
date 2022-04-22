@@ -19,6 +19,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root{
     --red-wine: #731627;
     --pink-stick: #D9B1AD;
@@ -30,31 +31,14 @@
     --light-red-wine: rgba(141,22,65,40%);
     --beby-pink: #FACCC7;
 }
+
+html{
+    height: 100%;
+}
+
 body{
     font-size: 16px;
 }
-
-/*.input-wrapper {
-    position: relative;
-    width: 271px;
-  }
-  
-  .input {
-    box-sizing: border-box;
-    color: #191919;
-    padding: 15px 15px 15px 35px;
-    width: 100%;
-  }
-
-  .input-icon {
-    color: #191919;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-  }*/
   
   nav{
     background-color: var(--red-wine);
@@ -84,6 +68,15 @@ hr{
     display: block;
     display: flex;
     flex-direction: column;
+}
+
+h2{
+    font-family: 'breadley';
+    color:var(--red-wine);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .btn-menu{
@@ -237,26 +230,40 @@ footer i{
 }
 
 .btn-pasteleria button{
-    display: flex;
     width: 90%;
     background-color: var(--pink-stick);
     border-end-start-radius: 10px;
     border-end-end-radius: 10px;
 }
 
+.btn-pasteleria button:hover{
+    animation: salir 1s infinite;
+}
+
+@keyframes salir{
+    0%{
+        width: 80px;
+    }
+    100%{
+        width: 80px;
+    }
+
+}
+
 .btn-pasteleria a{
+    display: flex;
     text-decoration-line: none;
     color: var(--black-rose);
 }
 
 .btn-pasteleria img{
-    width: 30px;
+    width: 25px;
     margin: 5%;
 }
 
 .btn-pasteleria p{
-    padding: 8% 5%;
-    font-size: 15px;
+    padding: 6% 5%;
+    font-size: 14px;
     font-family: 'delius';
     text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
 }
@@ -266,7 +273,12 @@ footer i{
 }
 
 .seleccion{
-    border: 3px solid var(--black-rose);
+    display: flex;
+    flex-direction: row;
+    border-top: 3px solid var(--black-rose);
+    border-right: 3px solid var(--black-rose);
+    border-bottom: 3px solid var(--black-rose);
+    border-left: 3px solid var(--pink-stick);
 }
 
 #container-tortas{
@@ -427,6 +439,28 @@ footer i{
     padding: 5px;
 }
 
+.btn-window-cakes2{
+    display: flex;
+    justify-content: center;
+    padding: 1% 0 5% 0;
+}
+
+.btn-window-cakes2 button{
+    border-radius: 50%;
+    background-color: var(--cream);
+    border: 1px solid var(--black-rose);
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.btn-window-cakes2 i{
+    color: var(--black-rose);
+}
+
+.btn-window-cakes2 h3{
+    font-family: 'delius';
+    padding: 5px;
+}
 
 .modalCarrito{
     border: 2px solid var(--red-wine);
@@ -440,6 +474,7 @@ footer i{
     border-radius: 0.4em;
 }
 
+
 @media screen and (min-width:768px){
 
     nav{
@@ -451,6 +486,11 @@ footer i{
     .btn-menu{
         display: none;
     }
+
+    h2{
+        font-size: 38px;
+    }
+
     .items{
         display: flex;
         margin: 1rem auto;
@@ -510,22 +550,22 @@ footer i{
         display: flex;
         margin: 3% 0 17% 0;
     }
-
+ 
     footer{
-        margin-top: 30px;
+        margin-top: 110px;
+        height: 120px;
     }
     footer p{
+        margin-top: 3rem;
         margin-bottom: 3.5rem;
-        font-size: 12px;
+        font-size: 10px;
     }
+
     footer i{
         font-size: 30px;
         margin: 0 1% 2% 1%;  
     }
 
-    .box-footer {
-        margin-top: -100px;
-    }
 
     /*tortas*/
 
@@ -535,11 +575,10 @@ footer i{
 }
 
 .btn-pasteleria button{
-    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     width: 50px;
-    height: 140px;
+    height: 150px;
     border-end-start-radius: 0px;
     border-end-end-radius: 0px;
     border-bottom-right-radius: 10px;
@@ -548,7 +587,7 @@ footer i{
      
      .btn-pasteleria img{
          width: 35px;
-         margin-top: 50%;
+         margin-top: 58%;
          transform: rotate(-90deg);
      }
      
@@ -559,8 +598,14 @@ footer i{
          font-family: 'delius';
          text-shadow: 0.2px 0.2px 0.2px var(--black-rose);
          transform: rotate(-90deg);
-         
      }
+
+     .btn-pasteleria a{
+        display: flex;
+        flex-direction: column-reverse;
+        text-decoration-line: none;
+        color: var(--black-rose);
+    }
      
 
 
@@ -651,6 +696,16 @@ footer i{
     color: var(--black-rose);
 }
 
+.btn-window-cakes2{
+    display: flex;
+    justify-content: flex-start;
+    padding: 4% 0% 2% 10%;
+}
+
+.btn-window-cakes2 h3{
+    font-size:22px;
+    padding: 7px;
+}
 
 }
 
@@ -658,6 +713,11 @@ footer i{
 
     .line-nav{
         height: 2.6rem;
+    }
+
+    h2{
+        font-size: 46px;
+        margin-bottom: 15px;
     }
 
     .items{
@@ -673,10 +733,16 @@ footer i{
         font-size: 1.7rem;
     }
 
+    .buttons-container input{
+        height: 45px;
+        width: 180px;
+        padding: 5px 0 0 0;
+    }
+
     #header-container img{
         width: 420px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 25px;
     }
     .header-title{
@@ -761,29 +827,28 @@ footer i{
 
 .modalContainer{
     width: 100%;
-    height:550px;
+    height:540px;
 }
 
 .modalContainer2{
-    height: 510px;
+    height: 525px;
 }
 
 .modalContainer2 p{
-    width: 100%;
-    margin: 0.5em 0.5em 1.5em 1em;
+    margin: 1em 1em 1.2em -1.5em;
     line-height: 1.4;
     font-size: 18px;
 }
 
 .ventana img{
-    margin-top: 10%;
+    margin-top: 5%;
     padding-top: -1%;
-    margin-left: -6%;
+    margin-left: -3%;
     width: 360px;
 }
 
 .modalTitle{
-    padding-top:30%;
+    padding-top:20%;
     font-size: 24px;
     margin-right: 1.5em;
 }
@@ -794,7 +859,14 @@ footer i{
 }
 
 .btn-car{
-    margin: 2% 3% 10% 0%;
+    margin: auto 11%;
+    justify-content: flex-start;
+}
+
+.btn-car2{
+    margin: 3% 10%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .modalCarrito{
@@ -833,6 +905,18 @@ footer i{
     padding: 8px;
     color: var(--black-rose);
 }
+.btn-window-cakes2{
+    display: flex;
+    justify-content: flex-start;
+    padding: 4% 0% 2% 10%;
+    margin: -8% 0 -5% 8%;
+}
+
+.btn-window-cakes2 h3{
+    font-size:26px;
+    padding-top: 5px;
+}
+
 
 }
 
@@ -850,7 +934,7 @@ footer i{
     #header-container img{
         width: 450px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 30px;
     }
     .header-title{
@@ -926,32 +1010,64 @@ footer i{
 }
 
 .ventana img{
-    width: 360px;
-}
-
-.modalTitle{
-    padding-top: 12px;
-    font-size: 26px;
+    margin-top: 4%;
+    margin-left: -1%;
+    width: 350px;
 }
 
 .modalContainer p{
-    margin: 1em 0.5em 1em 0em;
+    margin: 1em 1em 1em 0em;
     font-size: 18.5px;
 }
 
+.modalContainer2{
+    height: 525px;
+}
+
+.modalContainer2 p{
+    margin: 1em 1em 1.2em -0.7em;
+    line-height: 1.4;
+    font-size: 19px;
+}
+
+.option-cakes{
+    margin-left: 6%;
+}
+.option-cakes p{
+    margin: 4px 5px 12px 6px;
+}
+
 .modalCarrito{
-    margin-bottom: 3%;
+    margin-bottom: 1%;
     padding: 0.5em 0.8em;
     font-size: 20px;
 }
 
 .modalTitle{
-    padding-top:35%;
+    padding-top: 26%;
 }
 
 .btn-window-cakes{
-    margin-top: -13%;
+    margin-top: -18%;
+}
+
+.btn-window-cakes2{
+    margin: -9% 0 -6% 8%;
+}
+
+.btn-window-cakes2 h3{
+    font-size:27px;
+    padding-top: 5px;
 }
 
 
+}
+.section a{
+    width: 46px;
+}
+.section img{
+    width: 35px;
+}
+.section p{
+    margin-top: 2.5rem;
 }
