@@ -1,0 +1,538 @@
+@font-face{
+    font-family: 'nesans';
+    src: url(../utils/fonts/Nesans\ Semi\ Bold.ttf);
+}
+@font-face{
+    font-family: 'breadley';
+    src: url(../utils/fonts/BreadleySans-Regular.ttf);
+}
+@font-face{
+    font-family: 'delius';
+    src: url(../utils/fonts/Delius-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red-wine: #731627;
+    --pink-stick: #D9B1AD;
+    --white: #F6F5EE;
+    --dark-beige:#BF9775;
+    --golden: #AF8738;
+    --cream: #F0ECDE;
+    --black-rose:#2B0D16;
+    --light-red-wine: rgba(141,22,65,40%);
+    --beby-pink: #FACCC7;
+}
+body{
+    width: 100%;
+    font-size: 16px;
+}
+nav{
+    background-color: var(--red-wine);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.5rem;
+}
+hr{
+    background-color: var(--red-wine);
+    width: 100%;
+    height: 4px;
+    margin-top: 2px;
+}
+#chk-menu{
+    display: none;
+}
+#chk-menu:checked ~ .items{
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+.btn-menu{
+    color: var(--beby-pink);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 100%
+}
+.btn-menu i{
+    background-color: var(--pink-stick);
+    color: var(--black-rose);
+    padding: 5px 6px;
+    border-radius: 10px;
+    border: 1px solid var(--red-wine);
+    box-shadow: 4px 4px 6px var(--black-rose);
+}
+.items{
+    display: none;
+    font-family: 'delius';
+    font-size: 20px;
+}
+.item{
+    color: var(--white);
+    margin: 7px;
+    text-decoration: none;
+}
+.item:hover{
+    color: rgba(248, 245, 246, 0.8);
+    text-decoration: solid var(--cream);
+    transform: scale(1.2);
+    transition: transform ;
+    text-decoration: underline;
+    margin-left: 1rem;
+}
+#header-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+#header-container img{
+    margin-top: 10px;
+    width: 250px;
+}
+.header-title{
+    color: var(--black-rose);
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0.5px var(--black-rose);
+    font-family: 'nesans';
+    font-size: 22px;
+}
+.button-header{
+    display: flex;
+    justify-content: center;
+}
+.button-header button{
+    background-color: var(--pink-stick);
+    border: 0.5px solid var(--red-wine);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+    padding: 8px;
+    box-shadow: 4px 4px 6px var(--black-rose);
+}
+.shop{
+    font-size: 20px;
+    color: var(--black-rose);
+}
+.button-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons-container{
+    display: flex;
+    margin-top: 3%;
+}
+.buttons-container input{
+    border-radius: 30px;
+    background-color: var(--pink-stick);
+    border: 0.5px solid var(--red-wine);
+    box-shadow: 4px 4px 6px var(--black-rose);
+    width: 150px;
+    height: 40px;
+    margin-top: 8px;
+    text-align: end;
+}
+.buttons-container input::placeholder{
+    color: var(--black-rose);
+    font-size: 20px;
+}
+#container-text{
+    padding:30px 30px 0 30px;
+}
+h2{
+    font-family: 'breadley';
+    color:var(--red-wine);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+p{
+    font-family: 'breadley';
+    text-align: justify;
+    margin-bottom: 20px;
+}
+#slider{
+    margin: 10px 0 20px 0;
+    width: 100%;
+    height: 210px;
+    padding: 10px 30px;
+    overflow: hidden;
+}
+#slider ul{
+    width: 300%;
+    display: flex;
+    animation: change 15s infinite alternate;
+    
+}
+#slider li{
+    width: 100%;
+    list-style: none;
+    padding: 0 30px;
+}
+#slider p{
+    color: var(--red-wine);
+    background-color:rgba(217, 177, 173,80%);
+    border-radius: 10px;
+    font-family: 'delius';
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    width: 150px;
+    position: relative;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, -50%);
+}
+#slider img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+@keyframes change{
+    0%,30%{
+        margin-left: 0;
+    }
+    35%,65%{
+        margin-left: -100%;
+    }
+    70%,100%{
+        margin-left: -200%;
+    }
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.btn-order{
+    text-decoration: none;
+    border: 0.5px solid var(--red-wine) ;
+    color: var(--black-rose);
+    border-radius: 50px;
+    font-family: 'delius';
+    font-weight: bolder;
+    padding:10px;
+    background-color: var(--dark-beige);
+    box-shadow: 0px 8px 10px rgb(00, 00, 00, 30%);
+}
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.441);
+    display: flex;
+    --opacity:0;
+    --pointer:none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity 0.5s;
+}
+.modal:target{
+    --opacity: 1;
+    --pointer: unset;
+}
+.modalContainer{
+    margin: auto;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    max-height: 98%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+.modalContainer h2{
+    font-size: 28px;
+    margin-bottom: 0;
+}
+.modal:target .modalContainer{
+    animation: show 1s 0.5s backwards;
+}
+@keyframes show{
+    0%{
+        transform: translateY(-150vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.modalPicture{
+    font-size: 50px;
+    margin: -30px auto;
+    color: var(--red-wine);
+}
+.modal:target .modalPicture{
+    animation: scale 0.5s 1s backwards; /*Trae las propiades del elemento o clase que estoy llamando y a su vez conservar las nuevas que le estoy asignando*/
+}
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+}
+#form{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+#form label{
+    font-family: 'delius';
+    text-align: start;
+    margin:5px 0;
+}
+#form input{
+    background-color: var(--pink-stick);
+    border: 0.1px solid var(--red-wine);
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 10px;
+}
+#form input::placeholder{
+    font-family: 'delius';
+}
+#form textarea{
+    font-family: 'delius';
+    background-color: var(--pink-stick);
+    border: 0.1px solid var(--red-wine);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 0 0 10px;
+}
+.btn-send{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: var(--white);
+    background-color: var(--red-wine);
+    border: 1px solid var(--red-wine);
+    border-radius: 30px;
+    font-family: 'delius';
+    font-weight: bolder;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.modalP{
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: bolder;
+}
+@media (max-width:600px){
+    .modalTitle{
+        font-size: 9px;
+    }
+}
+footer{
+    width: 100%;
+    background-image: url(../utils/img/footerDulceTrigo.svg);
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+footer p{
+    margin-bottom: 3rem;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'delius';
+}
+footer i{
+    margin: 0 1% 3% 1%;  
+    font-size: 25px;
+    color: var(--cream);
+}
+/*Resolucion tablet*/
+@media screen and (min-width:768px){
+    nav{
+        width: 100%;
+        flex-direction: row;
+        justify-content:center;
+        padding:auto 0;
+    }
+    .btn-menu{
+        display: none;
+    }
+    .line-nav{
+        width: 3px;
+        height: 2.2rem;
+        background-color:var(--cream);
+        border-radius: 20px;
+        border: none;
+    }
+    .items{
+        display: flex;
+        margin: 1rem 0;
+    }
+    .item{
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: var(--white);
+        margin: auto 2.1rem;
+    }
+    .item:hover{
+        margin:auto 3rem;
+        font-size: 1.4rem;
+    }
+    #header-container{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #header-container img{
+        width: 350px;
+    }
+    .button-header{
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+    .buttons-container{
+        display: flex;
+        margin: 3% 0 17% 0;
+    }
+    .header-title{
+        font-size: 23px;
+    }
+    h2{
+        font-size: 38px;
+    }
+    p{
+        font-size: 26px;
+    }
+    #slider{
+        height: 410px;
+    }
+    #slider img{
+        height: 550px;
+    }
+    #slider p{
+        width: 230px;
+        left: 50%;
+        bottom: 190px;
+    }
+    .btn-order{
+        margin-bottom: 50px;
+    }
+    footer{
+        margin-top: 30px;
+    }
+    footer p{
+        margin-bottom: 3.5rem;
+        font-size: 12px;
+    }
+    footer i{
+        font-size: 30px;
+        margin: 0 1% 2% 1%;  
+    }
+}
+/*Resolucion medias*/
+@media screen and (min-width:1024px){
+    .line-nav{
+        height: 2.6rem;
+    }
+    .item{
+        font-size: 1.7rem;
+        margin: auto 4.5rem;
+    }
+    .item:hover{
+        margin:auto 5rem;
+        font-size: 1.6rem;
+    }
+    #header-container img{
+        width: 420px;
+    }
+    .shop, .buttons-container input::placeholder{
+        font-size: 25px;
+    }
+    .buttons-container input{
+        height: 45px;
+        width: 180px;
+        padding: 5px 0 0 0;
+    }
+    .header-title{
+        font-size: 34px;
+    }
+    h2{
+        font-size: 46px;
+    }
+    #slider{
+        height: 510px;
+    }
+    #slider img{
+        height: 700px;
+    }
+    #slider p{
+        bottom: 250px;
+    }
+    .btn-order button{
+        padding:20px;
+        font-size: 22px;
+    }
+    footer{
+        height: 150px;
+    }
+    footer p{
+        margin-bottom: 5rem;
+        font-size: 14px;
+    }
+    footer i{
+        font-size: 45px;
+    }
+}
+/*Resolucion macro*/
+@media screen and (min-width:1200px){
+    .item{
+        font-size: 2rem;
+        margin: auto 5.5rem;
+    }
+    .item:hover{
+        font-size: 2.1rem;
+    }
+    #header-container img{
+        width: 450px;
+    }
+    .shop, .buttons-container input::placeholder{
+        font-size: 30px;
+    }
+    .buttons-container input{
+        height: 50px;
+        width: 200px;
+        padding: 10px 0 0 0;
+    }
+    .header-title{
+        font-size: 42px;
+    }
+    #slider{
+        height: 610px;
+    }
+    #slider img{
+        height: 800px;
+    }
+    #slider p{
+        width: 260px;
+        font-size: 30px;
+    }
+    .modalContainer{
+        height: 100%;
+    }
+    .modalP{
+        margin: -20px 0 5px 0;
+    }
+    .btn-send{
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+    footer p{
+        font-size: 16px;
+    }
+}
