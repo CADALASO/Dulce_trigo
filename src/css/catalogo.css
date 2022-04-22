@@ -70,6 +70,15 @@ hr{
     flex-direction: column;
 }
 
+h2{
+    font-family: 'breadley';
+    color:var(--red-wine);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .btn-menu{
     color: var(--beby-pink);
     font-size: 1.5rem;
@@ -477,6 +486,11 @@ footer i{
     .btn-menu{
         display: none;
     }
+
+    h2{
+        font-size: 38px;
+    }
+
     .items{
         display: flex;
         margin: 1rem auto;
@@ -701,6 +715,11 @@ footer i{
         height: 2.6rem;
     }
 
+    h2{
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+
     .items{
         justify-content: space-between;
     }
@@ -714,10 +733,16 @@ footer i{
         font-size: 1.7rem;
     }
 
+    .buttons-container input{
+        height: 45px;
+        width: 180px;
+        padding: 5px 0 0 0;
+    }
+
     #header-container img{
         width: 420px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 25px;
     }
     .header-title{
@@ -909,7 +934,7 @@ footer i{
     #header-container img{
         width: 450px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 30px;
     }
     .header-title{
