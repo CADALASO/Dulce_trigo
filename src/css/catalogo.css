@@ -1062,3 +1062,12 @@ footer i{
 
 
 }
+.section a{
+    width: 46px;
+}
+.section img{
+    width: 35px;
+}
+.section p{
+    margin-top: 2.5rem;
+}
