@@ -198,58 +198,8 @@ td{
     box-shadow: 2px 2px 2px var(--black-rose);
 }
 /*carro de compras*/
-  /*modal*/
-  .modal-pay{
-    position: fixed;
-    top: 0;
-    bottom:0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    display: flex;
-    --opacity:0;
-    --pointer:none;
-    opacity: var(--opacity);
-    pointer-events: var(--pointer);
-    transition: opacity 0.5s;
-}
+/*modal*/
 
-.modal:target{
-    --opacity: 1;
-    --pointer:unset;
-}
-.modalcontainer{
-    margin: auto;
-    background-color: whitesmoke;
-    width: 90%;
-    max-width: 600px;
-    max-height: 90%;
-    overflow: hidden;
-    text-align: center;
-    padding: 2.5em 1.5em;
-    border-radius: 1em;
-}
-.modal:target .modalcontainer{
-    animation: show 1s backwards;
-}
-@keyframes show{
-    0%{transform: translateY(-150vh);}
-    100%{transform: translateY(0);}
-}
-.modalp{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    line-height: 1.5;
-}
-.modalclose{
-    display: inline-block;
-    border: 1px solid #333;
-    padding: 1em 2em;
-    text-decoration: none;
-    font-weight: 700;
-    color: #333;
-    border-radius: 0.4em;
-}
 /*modal*/
 footer{
     width: 100%;
