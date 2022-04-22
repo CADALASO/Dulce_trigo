@@ -1,12 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../css/catalogo.css">
+    <script src="https://kit.fontawesome.com/bb22cb708c.js" crossorigin="anonymous"></script>
+    <title>Dulce trigo</title>
 </head>
+
 <body>
-    
+    <div>
+        <nav>
+            <input type="checkbox" id="chk-menu">
+            <label for="chk-menu" class="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <div class="items">
+                <a href="../acercade.html" class="item1">Acerca de</a>
+                <hr class="line-nav">
+                <a href="../personalizados.html" class="item1">Productos personalizados</a>
+                <hr class="line-nav">
+                <a href="../contacto.html" class="item1">Contacto</a>
+            </div>
+        </nav>
+        <hr>
+    </div>
+
+    <header id="header-container">
+        <a href="../../../index.html">
+            <img src="../../utils/img/LogoDulceTrigo.svg" alt="logo dulce trigo">
+        </a>
+        <div class="button-header">
+            <h3 class="header-title">“Traemos el dulce sabor que le hace falta a tu vida”</h3>
+            <div class="buttons-container">
+                <input type="search" id="search" name="search" style="font-family: FontAwesome;" placeholder="&#xf002;">
+                <a href="../compras.html">
+                    <button type="submit">
+                        <i class="fa-solid fa-cart-shopping shop"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="btn-pasteleria">
+        <button type="submit" class="seleccion">
+            <a href="../panaderia/pasabocas.html">
+                <img src="../../utils/img/icon-hojaldre.svg">
+                <p>Pasabocas</p>
+            </a>
+        </button>
+        <button type="submit" class="border-btn">
+            <a href="../panaderia/especial.html">
+                <img src="../../utils/img/icon-especial.svg">
+                <p>Especiales</p>
+            </a>
+        </button>
+        <button type="submit" class="border-btn">
+            <a href="../panaderia/integral.html">
+                <img src="../../utils/img/icon-dietetico.svg">
+                <p>Dietético</p>
+            </a>
+        </button>
+    </div>
+    <h2>Línea Dietetica</h2>
+    <section id="container-tortas" class="tortas">
+        <article>
+            <a href="#modal1">
+                <img src="../../utils/img/pan-avena.svg"></a>
+            <p>Pan de avena</p>
+        </article>
+        <section id="modal1" class="modal">
+            <div class="modalContainer">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/pan-de-avena-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Pan de avena</h3>
+                        <p class="modalP">Delicioso pan con hojuelas de avena con alto aporte de hierro, calcio y
+                            proteinas.
+                        </p>
+                        <div class="option-cakes">
+                            <div class="option1">
+                                <p>$3.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <a href="#modal2">
+                <img src="../../utils/img/pan-soya.svg"></a>
+            <p>Pan de soya</p>
+        </article>
+
+        <section id="modal2" class="modal">
+            <div class="modalContainer2">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/pan-de-soya-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Pan de soya</h3>
+                        <p class="modalP">Delicioso pan realizado con harina de soya con alto aporte de proteinas y
+                            fibra.
+                        </p>
+                        <div class="option-cakes">
+                            <div class="option1">
+                                <p>$3.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes2">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car2">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <a href="#modal3">
+                <img src="../../utils/img/pan-multicereal.svg"></a>
+            <p> Pan multicereales</p>
+        </article>
+
+
+        <section id="modal3" class="modal">
+            <div class="modalContainer">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/pan-integral-multicereal-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Pan multicereales</h3>
+                        <p class="modalP">Delicioso pan hecho con trigo, linaza, centeno, salvado de trigo, sémola de
+                            maíz, avena, sésamo, cebada, y centeno, para un gran aporte de fibra, proteinas y vitaminas.
+                        </p>
+                        <div class="option-cakes">
+                            <div class="option1">
+                                <p>$3.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+
+        <article>
+            <a href="#modal4">
+                <img src="../../utils/img/pan-quinoa.svg"></a>
+            <p>Pan de quinoa</p>
+        </article>
+
+        <section id="modal4" class="modal">
+            <div class="modalContainer">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/pan-quinoa-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Pan de quinoa</h3>
+                        <p class="modalP">
+                            Delicioso pan hecho con harian de quinoa rico en vitaminas del grubo B y E el cual ayuda a
+                            depurar el higado y tiene acción tonificante y antiinflamatoria.
+                        </p>
+                        <div class="option-cakes">
+                            <div class="option1">
+                                <p>$3.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <a href="#modal5">
+                <img src="../../utils/img/pan-avena-miel.svg"></a>
+            <p>Pan de avena y miel</p>
+        </article>
+        <section id="modal5" class="modal">
+            <div class="modalContainer">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/pan-avena-miel-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Pan de avena y miel </h3>
+                        <p class="modalP">Delicioso pan con hojuelas de avena y endulzado con miel que brinda alto aporte de hierro, calcio y
+                            proteinas.
+                        </p>
+                        <div class="option-cakes">
+                            <div class="option1">
+                               <p>$3.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+
+        <article>
+            <a href="#modal6">
+                <img src="../../utils/img/mogolla-multigranos.svg"></a>
+            <p>Mogollas multigranos</p>
+        </article>
+
+        <section id="modal6" class="modal">
+            <div class="modalContainer">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/MOGOLLA-INTEGRAL-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Mogolla multigranos</h3>
+                        <p class="modalP">La mogolla multigranos es ideal para todo tipo de personas y ayuda a una muy buena digestión.
+                        </p>
+                            <div class="option1">
+                                 <p>$5.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+
+        <article>
+            <a href="#modal7">
+                <img src="../../utils/img/tabacos.svg"></a>
+            <p>Tabacos integrales</p>
+        </article>
+
+        <section id="modal7" class="modal">
+            <div class="modalContainer">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/tabacos-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Tabacos integrales</h3>
+                        <p class="modalP">Delicioso pan en forma de tabacos x 6 unidades hecho con harina no refinada y salvado que aporta gran cantidad de fibra </p>
+                        <div class="option-cakes">
+                            <div class="option1">
+                                <p>$2.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <a href="#modal8">
+                <img src="../../utils/img/pan-linaza.svg"></a>
+            <p>Pan de linaza</p>
+        </article>
+        <section id="modal8" class="modal">
+            <div class="modalContainer">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/pan-linaza-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Pan de linaza</h3>
+                        <p class="modalP">Delicioso pan hecho con harina de linaza rico en fibra, omega 3 y 6 </p>
+                        <div class="option-cakes">
+                            <div class="option1">
+                                 <p>$3.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <a href="#modal9">
+                <img src="../../utils/img/pan-estevia.svg"></a>
+            <p>Pan endulzado <br>con estevia</p>
+        </article>
+
+        <section id="modal9" class="modal">
+            <div class="modalContainer2">
+                <div class="cerrarVentana">
+                    <a href="#section" class="modalClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+
+                <div class="ventana">
+                    <img src="../../utils/img/pan-estevia-modal.svg" class="modalImg">
+                    <div>
+                        <h3 class="modalTitle">Pan endulzado con estevia</h3>
+                        <p class="modalP">Delicioso pan integral multicereal endulzado unicamente con estevia.
+                        <div class="option-cakes">
+                            <div class="option1">
+                                 <p>$3.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-window-cakes2">
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <h3>1</h3>
+                    <button type="submit">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="btn-car2">
+                    <a href="#carrito" class="modalCarrito">Agregar al carrito</a>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <footer>
+        <div class="box-footer">
+            <p>Políticas de privacidad|Términos y condiciones</p>
+        </div>
+        <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest"></i>
+        </div>
+
+    </footer>
+
 </body>
+
 </html>

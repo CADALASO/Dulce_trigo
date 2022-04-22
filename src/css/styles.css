@@ -126,25 +126,19 @@ hr{
     display: flex;
     margin-top: 3%;
 }
-.button-search{
-    display: flex;
-    background-color: var(--pink-stick);
+.buttons-container input{
     border: 0.5px solid var(--red-wine);
-    box-shadow: 4px 4px 6px var(--black-rose);
     border-radius: 30px;
+    background-color: var(--pink-stick);
+    box-shadow: 4px 4px 6px var(--black-rose);
+    width: 150px;
+    height: 40px;
     margin-top: 8px;
 }
-.button-search input{
-    border: none;
-    border-radius: 30px;
-    background-color: var(--pink-stick);
-    width: 150px;
-    height: 30px;
-}
-.button-search i{
-    padding: 8px 8px 0 0;
+.buttons-container input::placeholder{
     color: var(--black-rose);
     font-size: 20px;
+    text-align: end;
 }
 /*honme*/
 .home h2{
@@ -316,8 +310,13 @@ footer i{
     #header-container img{
         width: 420px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 25px;
+    }
+    .buttons-container input{
+        height: 45px;
+        width: 180px;
+        padding: 5px 0 0 0;
     }
     .header-title{
         font-size: 34px;
@@ -361,8 +360,13 @@ footer i{
     #header-container img{
         width: 550px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 30px;
+    }
+    .buttons-container input{
+        height: 50px;
+        width: 200px;
+        padding: 10px 0 0 0;
     }
     .header-title{
         font-size: 42px;
@@ -377,6 +381,10 @@ footer i{
     .item{
         font-size: 2rem;
         margin: auto 5.2rem;
+    }
+    .buttons-container input{
+        height: 50px;
+        width: 180px;
     }
     /*home*/
     .home h2{
