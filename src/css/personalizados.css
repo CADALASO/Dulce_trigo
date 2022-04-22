@@ -128,23 +128,17 @@ hr{
     display: flex;
     margin-top: 3%;
 }
-.button-search{
-    display: flex;
+.buttons-container input{
+    border-radius: 30px;
     background-color: var(--pink-stick);
     border: 0.5px solid var(--red-wine);
     box-shadow: 4px 4px 6px var(--black-rose);
-    border-radius: 30px;
-    margin-top: 8px;
-}
-.button-search input{
-    border: none;
-    border-radius: 30px;
-    background-color: var(--pink-stick);
     width: 150px;
-    height: 30px;
+    height: 40px;
+    margin-top: 8px;
+    text-align: end;
 }
-.button-search i{
-    padding: 8px 8px 0 0;
+.buttons-container input::placeholder{
     color: var(--black-rose);
     font-size: 20px;
 }
@@ -198,7 +192,7 @@ p{
 }
 #slider img{
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 @keyframes change{
@@ -212,12 +206,13 @@ p{
         margin-left: -200%;
     }
 }
-.btn-order{
+.button{
     display: flex;
     justify-content: center;
-    margin-bottom:20px;
+    margin: 20px 0;
 }
-.btn-order button{
+.btn-order{
+    text-decoration: none;
     border: 0.5px solid var(--red-wine) ;
     color: var(--black-rose);
     border-radius: 50px;
@@ -226,6 +221,116 @@ p{
     padding:10px;
     background-color: var(--dark-beige);
     box-shadow: 0px 8px 10px rgb(00, 00, 00, 30%);
+}
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.441);
+    display: flex;
+    --opacity:0;
+    --pointer:none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity 0.5s;
+}
+.modal:target{
+    --opacity: 1;
+    --pointer: unset;
+}
+.modalContainer{
+    margin: auto;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    max-height: 98%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+.modalContainer h2{
+    font-size: 28px;
+    margin-bottom: 0;
+}
+.modal:target .modalContainer{
+    animation: show 1s 0.5s backwards;
+}
+@keyframes show{
+    0%{
+        transform: translateY(-150vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.modalPicture{
+    font-size: 50px;
+    margin: -30px auto;
+    color: var(--red-wine);
+}
+.modal:target .modalPicture{
+    animation: scale 0.5s 1s backwards; /*Trae las propiades del elemento o clase que estoy llamando y a su vez conservar las nuevas que le estoy asignando*/
+}
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+}
+#form{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+#form label{
+    font-family: 'delius';
+    text-align: start;
+    margin:5px 0;
+}
+#form input{
+    background-color: var(--pink-stick);
+    border: 0.1px solid var(--red-wine);
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 10px;
+}
+#form input::placeholder{
+    font-family: 'delius';
+}
+#form textarea{
+    font-family: 'delius';
+    background-color: var(--pink-stick);
+    border: 0.1px solid var(--red-wine);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 0 0 10px;
+}
+.btn-send{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: var(--white);
+    background-color: var(--red-wine);
+    border: 1px solid var(--red-wine);
+    border-radius: 30px;
+    font-family: 'delius';
+    font-weight: bolder;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.modalP{
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: bolder;
+}
+@media (max-width:600px){
+    .modalTitle{
+        font-size: 9px;
+    }
 }
 footer{
     width: 100%;
@@ -259,6 +364,13 @@ footer i{
     .btn-menu{
         display: none;
     }
+    .line-nav{
+        width: 3px;
+        height: 2.2rem;
+        background-color:var(--cream);
+        border-radius: 20px;
+        border: none;
+    }
     .items{
         display: flex;
         margin: 1rem 0;
@@ -270,7 +382,8 @@ footer i{
         margin: auto 2.1rem;
     }
     .item:hover{
-        margin-left: 2rem;
+        margin:auto 3rem;
+        font-size: 1.4rem;
     }
     #header-container{
         flex-direction: row;
@@ -300,12 +413,12 @@ footer i{
         height: 410px;
     }
     #slider img{
-        height: 400px;
+        height: 550px;
     }
     #slider p{
         width: 230px;
         left: 50%;
-        bottom: 40px;
+        bottom: 190px;
     }
     .btn-order{
         margin-bottom: 50px;
@@ -324,18 +437,27 @@ footer i{
 }
 /*Resolucion medias*/
 @media screen and (min-width:1024px){
+    .line-nav{
+        height: 2.6rem;
+    }
     .item{
         font-size: 1.7rem;
         margin: auto 4.5rem;
     }
     .item:hover{
-        margin-left: 5rem;
+        margin:auto 5rem;
+        font-size: 1.6rem;
     }
     #header-container img{
         width: 420px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 25px;
+    }
+    .buttons-container input{
+        height: 45px;
+        width: 180px;
+        padding: 5px 0 0 0;
     }
     .header-title{
         font-size: 34px;
@@ -347,7 +469,10 @@ footer i{
         height: 510px;
     }
     #slider img{
-        height: 500px;
+        height: 700px;
+    }
+    #slider p{
+        bottom: 250px;
     }
     .btn-order button{
         padding:20px;
@@ -371,13 +496,18 @@ footer i{
         margin: auto 5.5rem;
     }
     .item:hover{
-        margin-left: 6rem;
+        font-size: 2.1rem;
     }
     #header-container img{
         width: 450px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 30px;
+    }
+    .buttons-container input{
+        height: 50px;
+        width: 200px;
+        padding: 10px 0 0 0;
     }
     .header-title{
         font-size: 42px;
@@ -386,11 +516,21 @@ footer i{
         height: 610px;
     }
     #slider img{
-        height: 600px;
+        height: 800px;
     }
     #slider p{
         width: 260px;
         font-size: 30px;
+    }
+    .modalContainer{
+        height: 100%;
+    }
+    .modalP{
+        margin: -20px 0 5px 0;
+    }
+    .btn-send{
+        font-size: 12px;
+        padding: 8px 20px;
     }
     footer p{
         font-size: 16px;

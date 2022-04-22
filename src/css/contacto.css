@@ -128,45 +128,68 @@ hr{
     display: flex;
     margin-top: 3%;
 }
-.button-search{
-    display: flex;
+.buttons-container input{
+    border-radius: 30px;
     background-color: var(--pink-stick);
     border: 0.5px solid var(--red-wine);
     box-shadow: 4px 4px 6px var(--black-rose);
-    border-radius: 30px;
-    margin-top: 8px;
-}
-.button-search input{
-    border: none;
-    border-radius: 30px;
-    background-color: var(--pink-stick);
     width: 150px;
-    height: 30px;
+    height: 40px;
+    margin-top: 8px;
+    text-align: end;
 }
-.button-search i{
-    padding: 8px 8px 0 0;
+.buttons-container input::placeholder{
     color: var(--black-rose);
     font-size: 20px;
 }
-h2{
-    font-family: 'breadley';
-    color:var(--red-wine);
-    font-size: 30px;
+.banner{
+    background: url(../utils/img/banner-contacto.jpg) no-repeat right top scroll;
+    height:150px;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+.banner p{
+    width: 60%;
+    margin:10px;
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 1rem;
     text-align: center;
-    margin: 20px;
+    text-shadow: 2px 2px 2px var(--black-rose);
+    font-family: 'delius';
+}
+.banner h2{
+    width: 60%;
+    margin: 5px auto;
+    font-family: 'breadley';
+    color:var(--white);
+    font-size: 40px;
+    text-shadow: 2px 2px 2px var(--red-wine);
 }
 h3{
     font-family: 'breadley';
-    color: var(--black-rose);
-    margin: 10px 0 20px 0;
+    color: var(--red-wine);
+    font-weight: bolder;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 1.6rem;
 }
 p{
     font-family: 'breadley';
     text-align: justify;
+    margin-bottom:20px ;
 }
 #container-form, #container-contact{
     width: 90%;
     margin: auto;
+}
+#container-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #form{
     width: 100%;
@@ -191,7 +214,6 @@ p{
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 10px 0 0 10px;
-    color: rgba(00,00,00,50%);
 }
 .btn-send{
     display: flex;
@@ -214,6 +236,15 @@ p{
 .line-vertical{
     display: none;
 }
+.maps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.maps i, #container-form i{
+    font-size: 2rem;
+    color: var(--red-wine);
+}
 span{
     font-family: 'breadley';
     color: var(--red-wine);
@@ -223,7 +254,23 @@ iframe{
     width: 100%;
     height: 183px;
     box-shadow: 4px 4px 8px var(--red-wine);
-    margin: 20px 0;
+    margin: 5px 0;
+}
+.card{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    background-color: var(--light-red-wine);
+    margin: 20px auto;
+    border-radius: 10px;
+}
+.card p, .maps p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.card p{
+    margin: 0 10px 15px 0;
 }
 footer{
     width: 100%;
@@ -257,6 +304,13 @@ footer i{
     .btn-menu{
         display: none;
     }
+    .line-nav{
+        width: 3px;
+        height: 2.2rem;
+        background-color:var(--cream);
+        border-radius: 20px;
+        border: none;
+    }
     .items{
         display: flex;
         margin: 1rem 0;
@@ -268,7 +322,8 @@ footer i{
         margin: auto 2.1rem;
     }
     .item:hover{
-        margin-left: 2rem;
+        margin:auto 3rem;
+        font-size: 1.4rem;
     }
     .border{
         border-left: 2px solid var(--white);
@@ -290,20 +345,48 @@ footer i{
         display: flex;
         margin: 3% 0 17% 0;
     }
+    .shop, .buttons-container input::placeholder{
+        font-size: 25px;
+    }
+    .buttons-container input{
+        height: 45px;
+        width: 180px;
+        padding: 5px 0 0 0;
+    }
     .header-title{
         font-size: 23px;
     }
-    h2{
-        font-size: 38px;
+    .banner{
+        height:220px;
+        margin: 0 0 2rem 0; 
+    }
+    .banner p{
+        font-size: 1.5rem;
+    }
+    .banner h2{
+        margin: 10px auto;
+        font-size: 50px;
     }
     h3{
-        font-size: 22px;
+        font-size: 28px;
     }
     p{
-        font-size: 20px;
+        font-size: 22px;
+    }
+    #form input{
+        padding: 15px;
+    }
+    .btn-send{
+        justify-content: center;
     }
     iframe{
-        height: 220px;
+        height: 250px;
+    }
+    .container-cards{
+        display: flex;
+    }
+    .card{
+        width: 40%;
     }
     footer{
         margin-top: 30px;
@@ -319,12 +402,16 @@ footer i{
 }
 /*Resolucion medias*/
 @media screen and (min-width:1024px){
+    .line-nav{
+        height: 2.6rem;
+    }
     .item{
         font-size: 1.7rem;
         margin: auto 4.5rem;
     }
     .item:hover{
-        margin-left: 5rem;
+        margin:auto 5rem;
+        font-size: 1.6rem;
     }
     #header-container img{
         width: 420px;
@@ -335,8 +422,15 @@ footer i{
     .header-title{
         font-size: 34px;
     }
-    h2{
-        font-size: 46px;
+    .banner{
+        height:280px;
+    }
+    .banner p{
+        font-size: 2rem;
+    }
+    .banner h2{
+        margin: 10px auto;
+        font-size: 60px;
     }
     section{
         display: flex;
@@ -351,15 +445,24 @@ footer i{
     }
     .line-vertical{
         display: flex;
-        margin: 0 20px;
-        height: 400px;
+        margin: 0 25px;
+        height: 600px;
     }
-    .btn-send{
-        justify-content: center;
+    .card{
+        width: 45%;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .card p{
+        text-align: center;
+        margin-bottom:0;
     }
     iframe{
         height: 280px;
         border-radius: 30px;
+        margin: 20px 0 20px 0;
     }
     footer{
         height: 150px;
@@ -379,19 +482,55 @@ footer i{
         margin: auto 5.5rem;
     }
     .item:hover{
-        margin-left: 6rem;
+        font-size: 2.1rem;
     }
     #header-container img{
         width: 450px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 30px;
+    }
+    .buttons-container input{
+        height: 50px;
+        width: 200px;
+        padding: 10px 0 0 0;
     }
     .header-title{
         font-size: 42px;
     }
+    .banner{
+        height:340px;
+    }
+    .banner p{
+        font-size: 2.5rem;
+    }
+    .banner h2{
+        margin: 20px auto;
+        font-size: 70px;
+    }
+    .maps i, #container-form i{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 36px;
+    }
+    p,.card p, .maps p{
+        font-size: 28px;
+    }
+    #form input{
+        padding: 20px;
+    }
+    .btn-send button{
+        padding: 10px 50px;
+        font-size: 24px;
+    }
     .line-vertical{
-        height: 450px;
+        height: 700px;
+    }
+    iframe{
+        height: 310px;
+        border-radius: 30px;
+        margin: 20px 0 20px 0;
     }
     footer p{
         font-size: 16px;

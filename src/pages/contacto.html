@@ -17,9 +17,11 @@
             <i class="fa-solid fa-bars"></i>
         </label>
         <div class="items">
-                <a href="acercade.html" class="item">Acerca de</a>
-                <a href="personalizados.html" class="item">Productos personalizados</a>
-                <a href="contacto.html" class="item">Contacto</a>
+            <a href="acercade.html" class="item">Acerca de</a>
+            <hr class="line-nav">
+            <a href="personalizados.html" class="item">Productos personalizados</a>
+            <hr class="line-nav">
+            <a href="contacto.html" class="item">Contacto</a>
         </div>
     </nav>
     <hr>
@@ -28,25 +30,29 @@
         <div class="button-header">
             <h3 class="header-title">“Traemos el dulce sabor que le hace falta a tu vida”</h3>
             <div class="buttons-container">
-                <div class="button-search">
-                    <input type="search" id="search" name="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                <input type="search" id="search" name="search" style="font-family: FontAwesome;" placeholder="&#xf002;">
                 <a href="compras.html"><button type="submit">
                         <i class="fa-solid fa-cart-shopping shop"></i>
                     </button></a>
             </div>
         </div>
     </header>
-    <h2>Contacto</h2>
+    <div class="banner">
+        <h2>Contacto</h2>
+        <div>
+            <p>Comunicate con nosotros para revolver tus inquietudes con tus pedidos y productos</p>
+        </div>
+    </div>
     <section>
         <article id="container-form">
-            <h3>Cuentenos cómo podemos mejorar:</h3>
+            <i class="fa-solid fa-circle-question"></i>
+            <h3>Danos tu opinión:</h3>
+            <p>Ayudanos a mejorar para brindarte una mejor experiencia y productos de la más alta calidad</p>
             <form action="contact" id="form">
                 <input type="text" placeholder="Nombre">
                 <input type="number" placeholder="Número de contacto">
                 <input type="email" placeholder="Correo electrónico">
-                <textarea name="textarea" rows="8" cols="50">Mensaje</textarea>
+                <textarea name="textarea" rows="8" cols="50" placeholder="Mensaje"></textarea>
                 <div class="btn-send">
                     <button>Enviar</button>
                 </div>
@@ -55,13 +61,23 @@
         </article>
         <img src="../utils/img/Line-vertical.png" alt="line vertical" class="line-vertical">
         <article id="container-contact">
-            <h3>Contáctanos:</h3>
-            <p> <span>Teléfono:</span> 3000000000</p>
-            <p> <span>Dirección:</span> Calle P Sherman W 42 sidney</p>
+            <div class="maps">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>visitanos</h3>
+                <p> <span>Dirección:</span> Calle P Sherman W 42 sidney</p>
+            </div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.3526934184993!2d-74.12613568573688!3d4.708651842900885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f84aaa74ef7ef%3A0xe9e63c725e04fc!2sCra.%20107b%20Bis%20%2371-46%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1649986854258!5m2!1ses!2sco"
                 style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="container-cards">
+                <div class="card">
+                    <p><span>Teléfono:</span></p><p>3000000000</p>
+                </div>
+                <div class="card">
+                    <p> <span>E-mail:</span></p><p>info@dulcetrigo.com</p>
+                </div>
+            </div>
         </article>
     </section>
     <footer>

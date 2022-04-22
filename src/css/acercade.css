@@ -128,23 +128,17 @@ hr{
     display: flex;
     margin-top: 3%;
 }
-.button-search{
-    display: flex;
+.buttons-container input{
+    border-radius: 30px;
     background-color: var(--pink-stick);
     border: 0.5px solid var(--red-wine);
     box-shadow: 4px 4px 6px var(--black-rose);
-    border-radius: 30px;
-    margin-top: 8px;
-}
-.button-search input{
-    border: none;
-    border-radius: 30px;
-    background-color: var(--pink-stick);
     width: 150px;
-    height: 30px;
+    height: 40px;
+    margin-top: 8px;
+    text-align: end;
 }
-.button-search i{
-    padding: 8px 8px 0 0;
+.buttons-container input::placeholder{
     color: var(--black-rose);
     font-size: 20px;
 }
@@ -198,7 +192,23 @@ p{
     background-color: var(--pink-stick);
     border-radius: 50px 0 50px 0;
     box-shadow: 2px 2px 5px var(--red-wine);
+    background-image: linear-gradient(
+        90deg,
+        var(--pink-stick),
+        var(--cream)
+            );
+    background-size: 200% 200%;
+    animation: move 5s ease alternate infinite;
 }
+@keyframes move{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 100%;
+    }
+}
+
 .first-card img,.second-card img,.third-card img, .fourth-card img,.fifth-card img{
     width: 110px;
     height: auto;
@@ -217,6 +227,13 @@ p{
     background-color: var(--cream);
     border-radius: 0 50px 0 50px;
     box-shadow: -2px 2px 5px var(--red-wine);
+    background-image: linear-gradient(
+        90deg,
+        var(--cream),
+        var(--pink-stick)
+            );
+    background-size: 200% 200%;
+    animation: move 5s ease alternate infinite;
 }
 .fifth-card{
     margin-bottom: 20px;
@@ -253,6 +270,13 @@ footer i{
     .btn-menu{
         display: none;
     }
+    .line-nav{
+        width: 3px;
+        height: 2.2rem;
+        background-color:var(--cream);
+        border-radius: 20px;
+        border: none;
+    }
     .items{
         display: flex;
         margin: 1rem 0;
@@ -264,7 +288,8 @@ footer i{
         margin: auto 2.1rem;
     }
     .item:hover{
-        margin-left: 2rem;
+        margin:auto 3rem;
+        font-size: 1.4rem;
     }
     #header-container{
         flex-direction: row;
@@ -316,18 +341,27 @@ footer i{
 }
 /*Resolucion medias*/
 @media screen and (min-width:1024px){
+    .line-nav{
+        height: 2.6rem;
+    }
     .item{
         font-size: 1.7rem;
         margin: auto 4.5rem;
     }
     .item:hover{
-        margin-left: 5rem;
+        margin:auto 5rem;
+        font-size: 1.6rem;
     }
     #header-container img{
         width: 420px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 25px;
+    }
+    .buttons-container input{
+        height: 45px;
+        width: 180px;
+        padding: 5px 0 0 0;
     }
     .header-title{
         font-size: 34px;
@@ -408,8 +442,13 @@ footer i{
     #header-container img{
         width: 450px;
     }
-    .shop, .button-search i{
+    .shop, .buttons-container input::placeholder{
         font-size: 30px;
+    }
+    .buttons-container input{
+        height: 50px;
+        width: 200px;
+        padding: 10px 0 0 0;
     }
     .header-title{
         font-size: 42px;
